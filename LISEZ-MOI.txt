@@ -1,0 +1,58 @@
+DECIF — Questionnaire de pré-visite chaudière (application hors ligne)
+=====================================================================
+
+1. POUR LE WEBMASTER : MISE EN LIGNE
+------------------------------------
+- Déposer TOUS les fichiers de ce dossier, tels quels, dans un même dossier du site,
+  par exemple : https://www.decif.fr/questionnaire/
+- Le site doit être en HTTPS (obligatoire pour le fonctionnement sans internet).
+- Fichiers : index.html, sw.js, manifest.webmanifest, pdf-lib.min.js,
+  icon-192.png, icon-512.png, apple-touch-icon.png, entete_decif.jpg, logos_decif.jpg (ce fichier LISEZ-MOI.txt est facultatif).
+- Mise à jour du questionnaire : remplacer index.html, puis dans sw.js changer la ligne
+  VERSION (par exemple ...-2 au lieu de ...-1) pour que les téléphones prennent la nouvelle version.
+
+2. POUR LE TECHNICIEN : INSTALLATION (une seule fois, avec internet)
+--------------------------------------------------------------------
+iPhone / iPad :
+  1. Ouvrir le lien du questionnaire dans Safari.
+  2. Toucher Partager (carré avec flèche), puis « Sur l'écran d'accueil », puis « Ajouter ».
+  3. Toujours ouvrir le questionnaire depuis l'icône « DECIF Visite ».
+Android :
+  1. Ouvrir le lien dans Chrome.
+  2. Menu ⋮ puis « Installer l'application » (ou « Ajouter à l'écran d'accueil »).
+  3. Toujours ouvrir le questionnaire depuis l'icône « DECIF Visite ».
+
+Après cette installation, le questionnaire fonctionne sans internet.
+
+3. AU BUREAU, QUAND LE RENDEZ-VOUS EST CONFIRMÉ (recommandé)
+--------------------------------------------------------------
+  En bas du questionnaire : « Bureau : préparer une pré-visite ». Saisir nom, code client
+  Extrabat, adresse d'intervention (et de facturation si différente), date du RDV.
+  « Créer le PDF » → déposer le PDF PREVISITE_... dans le porte-documents du client.
+  Chez le client, le technicien ouvre ce PDF (avec réseau) et touche « OUVRIR LE QUESTIONNAIRE » :
+  nom et adresses sont déjà remplis et verrouillés.
+
+4. CHEZ LE CLIENT
+-----------------
+  1. Ouvrir l'icône « DECIF Visite » et remplir la fiche.
+     La saisie est gardée sur le téléphone, même si l'app se ferme.
+  2. Toucher « ENREGISTRER LE DOSSIER (PDF) ». Deux PDF sont créés :
+     - ..._DEVIS_CLIENT.pdf : devis DECIF (en-tête, n° PV-date-heure, mentions légales, IBAN,
+       bon pour accord) + conditions de vente + compte rendu de visite d'une page.
+     - ..._PREPARATION_INTERNE.pdf : devis à recopier dans Extrabat, matériel à préparer,
+       à prévoir sur place. C'est aussi ce PDF qui sert à « Reprendre un dossier ».
+  3. Le menu Partager s'ouvre : choisir « Mail » et envoyer les 2 PDF à travaux@decif.fr.
+     Le bureau vérifie et envoie au client le PDF DEVIS_CLIENT + la notice de la chaudière
+     (bibliothèque Extrabat). Si le client signe : recopier sur le bon de commande Extrabat.
+  4. Pour le client suivant : « Nouveau client ».
+
+Modifier un dossier : « Reprendre un dossier (PDF) », choisir le PDF PREPARATION_INTERNE, corriger, réenregistrer.
+Ce PDF interne contient toutes les données du questionnaire (elles serviront aussi à la
+création automatique du devis Extrabat quand l'accès API sera disponible).
+
+5. À SAVOIR
+-----------
+- Sans internet, tout fonctionne (remplissage, devis, PDF). Seul l'envoi dans Extrabat
+  demande du réseau, comme l'app Extrabat elle-même.
+- La saisie en cours est stockée sur le téléphone uniquement : enregistrer le PDF
+  avant de toucher « Nouveau client ».

@@ -1,6 +1,6 @@
 /* DECIF Pré-visite — fonctionnement hors ligne.
    À chaque mise à jour du questionnaire, changer VERSION pour que les téléphones récupèrent la nouvelle version. */
-const VERSION = 'decif-previsite-2026-10-09-20';
+const VERSION = 'decif-previsite-2026-10-17-19';
 const FILES = [
   './',
   './index.html',
@@ -8,7 +8,9 @@ const FILES = [
   './pdf-lib.min.js',
   './icon-192.png',
   './icon-512.png',
-  './apple-touch-icon.png'
+  './apple-touch-icon.png',
+  './entete_decif.jpg',
+  './logos_decif.jpg'
 ];
 
 self.addEventListener('install', (event) => {
