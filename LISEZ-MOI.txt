@@ -1,4 +1,4 @@
-DECIF — Questionnaire de pré-visite chaudière (application hors ligne)
+DECIF — Questionnaire de pré-visite chaudière — VERSION 3 (17/10/2026)
 =====================================================================
 
 1. POUR LE WEBMASTER : MISE EN LIGNE
@@ -56,3 +56,7 @@ création automatique du devis Extrabat quand l'accès API sera disponible).
   demande du réseau, comme l'app Extrabat elle-même.
 - La saisie en cours est stockée sur le téléphone uniquement : enregistrer le PDF
   avant de toucher « Nouveau client ».
+
+NOUVEAU EN VERSION 3
+- Bouton « Fin de chantier » : PV de réception (modèle PROFEEL), fiche de mise en service, autocontrôle PG (Fiche Visa Qualité 2026 officielle remplie), fiche pour le certificat Dekra (CC2), photos.
+- Nouveau fichier à mettre en ligne avec les autres : visa_qualite_habitation.pdf
