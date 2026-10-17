@@ -1,4 +1,4 @@
-DECIF — Questionnaire de pré-visite chaudière — VERSION 4 (17/10/2026)
+DECIF — Questionnaire de pré-visite chaudière — VERSION 5 (17/10/2026)
 =====================================================================
 
 1. POUR LE WEBMASTER : MISE EN LIGNE
@@ -66,3 +66,4 @@ NOUVEAU EN VERSION 3 et 4
 - Photos de la visite prises dans l'appli (ancienne chaudière, fumisterie, aération, tableau électrique / 30 mA, test de terre), rangées par rubrique en bas de la fiche de préparation ; elles reviennent avec « Reprendre un dossier ». En fin de chantier : photos chaudière installée, tableau électrique (30 mA faite ou non) et carte de garantie remise, en bas du PDF du bureau.
 - « Autres photos » avec légende (visite et fin de chantier), autant qu'on veut.
 - 4e PDF en fin de chantier : DOSSIER_CONTROLE (page de garde, Fiche Visa Qualité PG, fiche CC2, PV + mise en service, photos avant / après) à donner au contrôleur en cas d'audit.
+- Version 5 : « Nouveau client » vide bien la fiche ; case date alignée sur iPhone ; nouveau sous-titre.
