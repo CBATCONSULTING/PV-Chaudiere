@@ -1,4 +1,4 @@
-DECIF — Questionnaire de pré-visite chaudière — VERSION 3 (17/10/2026)
+DECIF — Questionnaire de pré-visite chaudière — VERSION 4 (17/10/2026)
 =====================================================================
 
 1. POUR LE WEBMASTER : MISE EN LIGNE
@@ -57,6 +57,12 @@ création automatique du devis Extrabat quand l'accès API sera disponible).
 - La saisie en cours est stockée sur le téléphone uniquement : enregistrer le PDF
   avant de toucher « Nouveau client ».
 
-NOUVEAU EN VERSION 3
+NOUVEAU EN VERSION 3 et 4
 - Bouton « Fin de chantier » : PV de réception (modèle PROFEEL), fiche de mise en service, autocontrôle PG (Fiche Visa Qualité 2026 officielle remplie), fiche pour le certificat Dekra (CC2), photos.
 - Nouveau fichier à mettre en ligne avec les autres : visa_qualite_habitation.pdf
+- Version 4 : la fiche « Fin de chantier » se vide quand on charge un autre client (bandeau d'avertissement si ce n'est pas le bon) ; objet du mail pré-rempli « FIN DE CHANTIER - NOM - adresse - date ».
+- Le PDF FIN_CHANTIER_BUREAU commence par une page de garde « DOSSIER FIN DE CHANTIER - BUREAU » (résumé + à faire), puis Dekra, contrôles, photos, et la copie des documents du client.
+- Fin de chantier : photos par rubrique (chaudière, fumisterie, gaz, électricité, eau/condensats, autres), rangées sous leur titre dans FIN_CHANTIER_BUREAU ; la page de garde signale les rubriques sans photo.
+- Photos de la visite prises dans l'appli (ancienne chaudière, fumisterie, aération, tableau électrique / 30 mA, test de terre), rangées par rubrique en bas de la fiche de préparation ; elles reviennent avec « Reprendre un dossier ». En fin de chantier : photos chaudière installée, tableau électrique (30 mA faite ou non) et carte de garantie remise, en bas du PDF du bureau.
+- « Autres photos » avec légende (visite et fin de chantier), autant qu'on veut.
+- 4e PDF en fin de chantier : DOSSIER_CONTROLE (page de garde, Fiche Visa Qualité PG, fiche CC2, PV + mise en service, photos avant / après) à donner au contrôleur en cas d'audit.
