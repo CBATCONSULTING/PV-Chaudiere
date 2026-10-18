@@ -1,4 +1,4 @@
-DECIF — Questionnaire de pré-visite chaudière — VERSION 8 (18/10/2026)
+DECIF — Questionnaire de pré-visite chaudière — VERSION 9 (18/10/2026)
 =====================================================================
 
 1. POUR LE WEBMASTER : MISE EN LIGNE
@@ -94,3 +94,9 @@ NOUVEAU EN VERSION 3 et 4
 - VERSION 8 (18/10 17:35) : regroupe tout ce qui précède depuis la V7 : PV + mise en service en un seul PDF client, plus de doublons, liens de téléchargement sur ordinateur, Visa 6.1 débloqué, cadre « Remplir depuis Extrabat » au bureau.
 
 - 18/10 17:45 : Électricité, travaux réalisés par DECIF : nouveau choix « Protection différentielle 30 mA à poser » (Type A / Type AC / Aucune), repris dans la fiche de préparation interne (rubrique Électricité — besoins travaux) pour faire le devis électricité.
+
+- VERSION 9 (18/10 18:40) : « Remplir depuis Extrabat » : quand le client est enregistré dans le champ « Société » (nom et prénom vides dans Extrabat), le nom et le prénom sont séparés (NOM en majuscules = nom ; sinon 1er mot = nom), civilité retirée (M., Mme, M. et Mme). Les vraies sociétés (SCI, SARL, SAS, CONSULTING, syndic…) restent entières dans « Nom ».
+
+- 18/10 18:50 (V9) : à l’envoi des PDF, l’objet du mail (« PRE-VISITE - NOM Prénom - adresse » / « FIN DE CHANTIER - NOM Prénom - … ») est copié automatiquement et affiché en haut de l’écran : si Gmail ne le remplit pas, appui long dans « Objet » puis Coller.
+
+- 18/10 18:50 (V9) : responsable gaz (appellation PG) = MELAOUI Djilali (remplace MENDES MONTEIRO Christophe, parti) sur la fiche CC2 Dekra et l’autocontrôle Visa Qualité ; corrigé aussi sur les téléphones qui avaient gardé l’ancien nom.
