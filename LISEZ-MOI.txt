@@ -1,4 +1,4 @@
-DECIF — Questionnaire de pré-visite chaudière — VERSION 5 (17/10/2026)
+DECIF — Questionnaire de pré-visite chaudière — VERSION 8 (18/10/2026)
 =====================================================================
 
 1. POUR LE WEBMASTER : MISE EN LIGNE
@@ -67,3 +67,30 @@ NOUVEAU EN VERSION 3 et 4
 - « Autres photos » avec légende (visite et fin de chantier), autant qu'on veut.
 - 4e PDF en fin de chantier : DOSSIER_CONTROLE (page de garde, Fiche Visa Qualité PG, fiche CC2, PV + mise en service, photos avant / après) à donner au contrôleur en cas d'audit.
 - Version 5 : « Nouveau client » vide bien la fiche ; case date alignée sur iPhone ; nouveau sous-titre.
+- Version 6 : si le technicien modifie chez le client une info préparée par le bureau (nom, adresse, téléphone, e-mail, étage, ascenseur, codes d'accès, facturation), un encadré rouge « À METTRE À JOUR DANS EXTRABAT » liste ancien -> nouveau en tête de la fiche de préparation, et l'objet du mail commence par « ⚠ MAJ EXTRABAT ». Les corrections du technicien ne sont plus écrasées si l'appli se recharge.
+- Noms des PDF : « NOM Prénom - Document - JJ-MM-AAAA.pdf » (Previsite a ouvrir par le technicien, Devis remplacement chaudiere, Fiche preparation INTERNE, PV de reception, Autocontrole Visa Qualite PG, Fin de chantier BUREAU, Dossier de controle).
+- Devis valable 3 mois (date « jusqu'au » calculée à +3 mois) ; phrase « Notice crédit d'impôts » supprimée des conditions de vente.
+- Correction : la fiche de préparation avec photos se recharge (Fin de chantier / Reprendre un dossier) ; les photos sont dans une pièce jointe du PDF (les fiches V5 déjà créées se rechargent aussi).
+- Fiche de préparation : bouton orange « JOUR DE LA POSE : OUVRIR LA FIN DE CHANTIER » (lien, comme la pré-visite) : l'appli s'ouvre sur la fin de chantier avec client, adresse, chaudière, raccordement, étage, 30 mA déjà remplis, sans téléchargement (sans les photos de la visite). « Charger la fiche de préparation » reste possible.
+- Fiche Visa Qualité plus rapide : bouton « TOUT VALIDER D'UN COUP », rubriques repliées avec leur état (✅ / ⚪ à voir / ⛔ anomalie), rubriques sans objet regroupées en bas, points PLT/PE/GPL mis « sans objet » automatiquement quand on est en cuivre / gaz naturel.
+- Responsable gaz PG (par défaut MENDES MONTEIRO Christophe) imprimé sur la Fiche Visa Qualité et la fiche CC2.
+- Fin de chantier : alerte rouge sous une mesure hors norme (CO ambiant > 10 ppm, CO fumées > 150 ppm, CO2 hors 8-10,5 %, pression 0,8-2,5 bar, gaz G20 17-25 mbar, fumées > 90 °C et rendement < 90 % en condensation, tension 207-253 V — seuils indicatifs) ; avant « Terminer », liste de ce qui n'est pas fait avec bouton « aller » qui amène dessus ; si on crée quand même, c'est noté en rouge sur la page de garde du dossier bureau.
+- Version 7 : fichiers numérotés dans l'ordre du chantier pour Extrabat : 1 - NOM Prénom - Previsite / 2 - Devis remplacement chaudiere / 3 - Fiche preparation INTERNE / 4 - PV de reception / 5 - Autocontrole Visa Qualite PG / 6 - Fin de chantier BUREAU / 7 - Dossier de controle.
+- Fiche Visa Qualité : 16 points importants à cocher un par un (1.1, 1.2, 1.5, 1.11, 1.20, 2.2, 2.3, 2.6, 4.1, 4.2, 4.4, 15.1 à 15.5) — non cochés par « Tout valider » et obligatoires pour terminer ; 6.1 (étanchéité) rempli par la case « contrôlée avec l'appareil de mesure » ; 22.1 rempli par la mesure de CO ambiant (≤ 10 ppm OK, sinon anomalie). Fin de chantier : pose murale / au sol et ballon UPEC (contrôles groupe de sécurité, réducteur, purge ballon, sonde ; chaudière au sol de niveau).
+- Ordinateur : après « Terminer » / « Enregistrer », un panneau liste tous les PDF créés avec un lien par fichier (si le navigateur bloque les téléchargements multiples).
+
+- 18/10 16:50 : PV de réception, points 1 et 3 : le jour de la pose, on remet seulement la carte de garantie (et la notice) ; le CC2 Dekra, la facture, la copie du PV et le rapport de mise en service sont envoyés ensuite par le bureau. Le contrôle « Notice » devient « Carte de garantie (et notice) remise au client ».
+
+- 18/10 17:05 : FIN DE CHANTIER SANS DOUBLONS. 4 PDF : 4 PV de reception (1 page : PV PROFEEL + 3 points de réception + réserves + mention 30 mA + signatures), 5 Fiche de mise en service (1 page), 6 Autocontrole Visa Qualite PG (officiel), 7 Fin de chantier BUREAU (à faire, fiche CC2 Dekra, contrôles, photos visite + pose, PV de levée des réserves si besoin). Le « Dossier de contrôle » est supprimé : en cas de contrôle PG, imprimer 6 + 4 + 5 + CC2 Dekra. Le bureau envoie au client : facture + 4 + 5.
+
+- 18/10 17:05 bis : le PV et la fiche de mise en service sont dans UN SEUL PDF pour le client (2 pages) : « 4 - NOM - PV de reception et mise en service ». Les fichiers deviennent : 4 client, 5 Autocontrole Visa Qualite PG, 6 Fin de chantier BUREAU.
+
+- 18/10 17:10 : Visa 6.1 (étanchéité) et 22.1 (CO ambiant) ne sont plus bloqués : on peut choisir OK / anomalie / sans objet directement dans la rubrique, et noter l’appareil de mesure juste en dessous du 6.1 (relié à la case du haut).
+
+- 18/10 17:15 : liste « à faire » du dossier BUREAU : photos AVANT = fiche 3, photos APRÈS = dossier 6. Fichiers de fin de chantier nommés « NOM Prénom » aussi quand on ouvre par le bouton orange. Marque de la chaudière plus en double (« Frisquet Frisquet »).
+
+- 18/10 17:40 : BUREAU, cadre « 📋 Remplir depuis Extrabat » : sur la Fiche contact Extrabat du client, Ctrl+A puis Ctrl+C, puis Ctrl+V dans le cadre. Remplit nom (ou société), prénom, téléphone, e-mail, adresse du chantier, CP, ville, code porte / indications, contact sur place (si société), étage s’il est écrit, et adresse de facturation si elle est différente.
+
+- VERSION 8 (18/10 17:35) : regroupe tout ce qui précède depuis la V7 : PV + mise en service en un seul PDF client, plus de doublons, liens de téléchargement sur ordinateur, Visa 6.1 débloqué, cadre « Remplir depuis Extrabat » au bureau.
+
+- 18/10 17:45 : Électricité, travaux réalisés par DECIF : nouveau choix « Protection différentielle 30 mA à poser » (Type A / Type AC / Aucune), repris dans la fiche de préparation interne (rubrique Électricité — besoins travaux) pour faire le devis électricité.
