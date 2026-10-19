@@ -1,4 +1,4 @@
-DECIF — Questionnaire de pré-visite chaudière — VERSION 9 (18/10/2026)
+DECIF — Questionnaire de pré-visite chaudière — VERSION 10 (19/10/2026)
 =====================================================================
 
 1. POUR LE WEBMASTER : MISE EN LIGNE
@@ -100,3 +100,19 @@ NOUVEAU EN VERSION 3 et 4
 - 18/10 18:50 (V9) : à l’envoi des PDF, l’objet du mail (« PRE-VISITE - NOM Prénom - adresse » / « FIN DE CHANTIER - NOM Prénom - … ») est copié automatiquement et affiché en haut de l’écran : si Gmail ne le remplit pas, appui long dans « Objet » puis Coller.
 
 - 18/10 18:50 (V9) : responsable gaz (appellation PG) = MELAOUI Djilali (remplace MENDES MONTEIRO Christophe, parti) sur la fiche CC2 Dekra et l’autocontrôle Visa Qualité ; corrigé aussi sur les téléphones qui avaient gardé l’ancien nom.
+
+- VERSION 10 (18/10 19:25) : « Remplir depuis Extrabat » : e-mail et téléphone repris même quand Extrabat les met sur la ligne sous « Email : » / « Tel occupant A : » ; sinon le premier e-mail / téléphone trouvé dans la fiche.
+
+- (V10) Copie Extrabat : adresse de facturation précédée de « PAYEUR: nom » reconnue (payeur + gestionnaire mis dans « Nom pour la facturation ») ; « 9E ARRONDISSEMENT » retiré de la ville ; le téléphone / e-mail du gestionnaire de facturation n’est plus pris pour celui du client ; plus de nom pris dans un contact par erreur.
+
+- (V10) Bouton « 💸 Remise exceptionnelle » (au-dessus de « Voir le devis détaillé ») : le technicien saisit un montant TTC ; l’appli le limite au maximum autorisé = marge au-delà de 10 % sur les articles dont on connaît le prix d’achat Cedeo (relevé le 18/10/2026) + main d’œuvre au-delà de 1 000 € HT (2 techniciens × 500 €). Ligne « Remise exceptionnelle » (code REMISE-EXC) sur le devis client ; montant et maximum rappelés dans la fiche de préparation interne. Fumisterie, plomberie, cordiste, désembouage : non remisables.
+
+- (V10) Prix alignés sur le catalogue Cedeo (18/10/2026) : Frisquet Prestige 18-25 4 693,20 € TTC, Hydromotrix 25-32 5 355,60 € TTC, UPEC 120 L 2 274,46 € TTC, UPEC 80 L 1 893,17 € TTC. Forfait main d’œuvre basse température : 948 € TTC (790 € HT) ; remise main d’œuvre BT possible jusqu’à 750 € HT (40 € HT max).
+
+- (V10) Fiche de préparation interne : tableau « Marge par poste » (vente HT, achat Cedeo / coût main d’œuvre HT, marge HT et %), total, et marge après remise exceptionnelle. Postes sans prix d’achat connu signalés.
+
+- (V10) Prix d’achat Cedeo ajoutés pour la fumisterie (65 articles : alu TEN Ø111 à 153, Sékurit 60/100 et 80/125, terminaux, neutraliseurs, Frisquet) → remise et marge calculées aussi sur la fumisterie. Cordiste et désembouage : « non remisable » (choix offert ou pas dans le questionnaire). Restent sans prix d’achat : plomberie (cuivre, PVC, raccords gaz), groupe de sécurité, réducteur, siphon, Sanicondens Eco, rallonge Frisquet 0,5 m.
+
+- 19/10 16 h (V10 rectifiée) : l’aide devient « Contribution financière GRDF (400 € HT) » : uniquement en APPARTEMENT (immeuble), chaudière à condensation, Paris (75), offre jusqu’au 30/11/2026 inclus ; case bloquée en maison individuelle et automatiquement à partir du 01/12/2026. Ligne du devis et mention légale obligatoire sur la facture : « Contribution financière GRDF – adaptation du conduit de fumée individuel -> 400 € HT » (rappelée en rouge dans la fiche interne). Code Extrabat inchangé : AIDE-EDF-400.
+- 19/10 16 h 05 : devis avec contribution GRDF : « Devis à signer au plus tard le 30/11/2026 » (visite/devis jusqu’au 30/10). La facture Extrabat reprend le libellé de la ligne du devis.
+- 19/10 16 h 08 (correction) : offre GRDF valable jusqu’au 30/11/2026 inclus (devis et signature) ; blocage à partir du 01/12/2026.
