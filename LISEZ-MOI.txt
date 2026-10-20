@@ -1,4 +1,4 @@
-DECIF — Questionnaire de pré-visite chaudière — VERSION 11 (19/10/2026)
+DECIF — Questionnaire de pré-visite chaudière — VERSION 12 (19/10/2026)
 =====================================================================
 
 1. POUR LE WEBMASTER : MISE EN LIGNE
@@ -118,3 +118,8 @@ NOUVEAU EN VERSION 3 et 4
 - 19/10 16 h 08 (correction) : offre GRDF valable jusqu’au 30/11/2026 inclus (devis et signature) ; blocage à partir du 01/12/2026.
 
 - VERSION 11 (19/10 17 h 45) : ENVOI DES PDF CORRIGÉ. Avant, sur téléphone, si la création des PDF prenait du temps, le partage échouait en silence et l’appli lançait des téléchargements un par un : le 1er PDF (2 - Devis ou 4 - PV) était perdu et d’autres arrivaient en double. Maintenant, après la création, un cadre vert « 📄 N PDF prêts » liste les PDF avec un gros bouton « 📤 ENVOYER LES N PDF (Mail) » : un nouveau toucher ouvre le partage avec TOUS les PDF en une fois. Sur ordinateur : un lien par PDF, plus aucun téléchargement automatique (donc ni manquant ni doublon).
+
+- VERSION 12 (19/10 22 h) :
+  • CHAUFFE-EAU GAZ : dans « Type d’appareil à prévoir », choix « Chauffe-eau gaz (Ondéa) » (ELM Leblanc). 5 modèles gaz naturel aux prix catalogue Cedeo : Hydropower LC 11-4 (cheminée, Ø111 à vérifier) et LC 14-4 (cheminée Ø125), LC 10-4 VMC, Hydrosmart LC 12-5 et LC 15-5 (ventouse 60/100, prise 230 V). Les étapes logement, déperditions, régulation, désembouage, le dosseret, le ballon et la contribution GRDF disparaissent. Sortie des fumées réglée selon le modèle. Forfait MO-CE 340 € HT (408 € TTC), 1 technicien. Devis « Remplacement de votre chauffe-eau gaz », fichier « 2 - … - Devis remplacement chauffe-eau ». Fin de chantier : contrôles propres au chauffe-eau, PV « Remplacement chauffe-eau gaz », CC2 appareil CHAUFFE-EAU, type B / B VMC / C selon le modèle.
+  • REMISE EXCEPTIONNELLE : seulement sur l’appareil principal (chaudière, ballon UPEC, chauffe-eau) = le plus grand de « garder 20 % de marge » ou « 5 % du prix », et sur la main d’œuvre jusqu’au plancher (1 000 € HT condensation, 750 € HT basse température, 290 € HT chauffe-eau). Plus aucune remise sur dosserets, fumisterie, régulation, plomberie et autres articles.
+  • À compléter : colliers de fixation alu, kit ventouse spécifique Ondéa Hydrosmart, raccords eau/gaz (prix Cedeo à relever).
