@@ -1,4 +1,4 @@
-DECIF — Questionnaire de pré-visite chaudière / chauffe-eau — VERSION 14 (21/10/2026)
+DECIF — Questionnaire de pré-visite chaudière / chauffe-eau — VERSION 15 (22/10/2026)
 =====================================================================
 
 1. POUR LE WEBMASTER : MISE EN LIGNE
@@ -139,3 +139,10 @@ NOUVEAU EN VERSION 3 et 4
   • Prix alignés sur le prix public Cedeo TTC du même article : kit ballon UPEC (groupe de sécurité inox Watts 2252570 41,08 ; réducteur Altech 45,29 ; siphon Watts 2292315 4,15), terminal Frisquet 108,00, rallonges Frisquet 147,60 / 94,80, Sanicondens Eco 168,41 ; plomberie interne : cuivre 2 m 32,57 / 37,56 / 42,50, raccord 18x3/4 VSH 32,86.
   • UN SEUL APPUI POUR TOUS LES PDF (21/10 18 h) : « Enregistrer le dossier » (2 PDF) et « Fin de chantier » (3 PDF). Téléphone : le partage s’ouvre tout de suite avec tous les PDF (si le téléphone refuse parce que la création a été trop longue, le gros bouton « Envoyer » reste en secours). Ordinateur : tous les PDF sont enregistrés d’un coup dans Téléchargements ; la 1re fois, Chrome demande « télécharger plusieurs fichiers » : cliquer « Autoriser » (une seule fois).
   • DEVIS : colonne « TVA 20 % » avec le montant de TVA de chaque ligne (Qté, PU HT, Total HT, TVA 20 %, Total TTC).
+
+- VERSION 15 (22/10/2026) :
+  • Devis : le nom du client apparaît dans le cadre « Adresse d’intervention » (M./Mme NOM Prénom), même quand la facture va à un syndic ou un payeur.
+  • Facturation copiée d’Extrabat : « PAYEUR » et le tiret en trop sont retirés du nom (ex. « CITYA KST »).
+  • Hauteur sous plafond : si le technicien tape des mètres (2,7) au lieu de centimètres, l’appli corrige en 270 cm (le calcul de puissance était faux) ; affichage arrondi sur le devis ; « m² » s’affiche « m2 » dans le PDF.
+  • Fumisterie ELM iCONDENS (Mégalis, Oxylis, Oxylia, Egalis) : façade 60/100 → adaptateur concentrique avec prise de mesure FC-CA60 (ELM 7738112636, 34,42 € TTC, code ELM-FCCA60 à créer) ajouté tout seul ; façade 80/125 → adaptateur FC-CA80 (7738112714) ajouté tout seul, comme en toiture.
+  • Par précaution, en façade 60/100 sur ELM iCONDENS : 1 coude 87° 60/100 de départ ajouté avec le FC-CA60 (à retirer de la facture s’il n’est pas posé ; il ne compte pas dans la longueur).
