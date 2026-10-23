@@ -1,4 +1,4 @@
-DECIF — Questionnaire de pré-visite chaudière / chauffe-eau — VERSION 15 (22/10/2026)
+DECIF — Questionnaire de pré-visite chaudière / chauffe-eau — VERSION 16 (23/10/2026)
 =====================================================================
 
 1. POUR LE WEBMASTER : MISE EN LIGNE
@@ -146,3 +146,12 @@ NOUVEAU EN VERSION 3 et 4
   • Hauteur sous plafond : si le technicien tape des mètres (2,7) au lieu de centimètres, l’appli corrige en 270 cm (le calcul de puissance était faux) ; affichage arrondi sur le devis ; « m² » s’affiche « m2 » dans le PDF.
   • Fumisterie ELM iCONDENS (Mégalis, Oxylis, Oxylia, Egalis) : façade 60/100 → adaptateur concentrique avec prise de mesure FC-CA60 (ELM 7738112636, 34,42 € TTC, code ELM-FCCA60 à créer) ajouté tout seul ; façade 80/125 → adaptateur FC-CA80 (7738112714) ajouté tout seul, comme en toiture.
   • Par précaution, en façade 60/100 sur ELM iCONDENS : 1 coude 87° 60/100 de départ ajouté avec le FC-CA60 (à retirer de la facture s’il n’est pas posé ; il ne compte pas dans la longueur).
+
+- VERSION 16 (23/10/2026) :
+  • Codes alignés avec Extrabat (les codes de l’appli font référence) : la ligne « Matériel de plomberie » du devis porte le code MAT-PLOMB.
+  • Basse température : 2 modèles cheminée ELM — Acléis Bas NOx NGLM24-7XN 24 kW (ELM-ACL24, réf. 7716705075, comme dans Extrabat) et Acléa Bas NOx cheminée 24 kW (ELM-ACLEA24, réf. 7716705092, celle vendue par Cedeo, à créer dans Extrabat).
+  • Liste des modèles : le message « choisir un autre type » ne propose plus les chauffe-eau quand on fait une chaudière.
+  • FORFAIT POSE MODIFIABLE par le technicien (étape « Forfait main d’œuvre ») : case « Prix du forfait pose (€ HT) ». Vide = prix normal (1 049,53 € HT condensation, 790 € HT basse température, 340 € HT chauffe-eau). On peut baisser jusqu’au plancher : 1 000 € HT condensation, 750 € HT basse température, 290 € HT chauffe-eau (en dessous, l’appli remet le plancher). Le devis prend le nouveau prix ; la fiche interne l’indique en rouge. La remise exceptionnelle tient compte du nouveau prix (plus de remise main d’œuvre si on est déjà au plancher).
+  • Coude 45° ELM 60/100 : l’ancien AZB911 (réf. 7719002781, vendu par 2) est remplacé chez Cedeo par le FC-CE60-45 (réf. 7738112501, à l’unité, 41,06 € TTC) → code ELM-FCCE60-45 ; l’appli compte 1 coude par coude 45°.
+  • Thermostat pour Acléis (marche/arrêt) : les TRL 7.26 et TRL 7.26 RF (introuvables chez Cedeo) sont remplacés par le TRL 1.26, programmation journalière filaire 2 fils, piles (ELM 7716780148, réf. Cedeo 1005240, 172,28 € TTC, code ELM-TRL126).
+  • PDF Previsite : sous le bouton vert, encadré « Le bouton vert ne réagit pas ? » (ouvrir le PDF avec Drive ou Acrobat) + le lien écrit en entier, copiable et cliquable (pour les visionneuses PDF qui ne gèrent pas les boutons, cas du téléphone de Djilali).
