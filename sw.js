@@ -1,6 +1,6 @@
 /* DECIF Pré-visite — fonctionnement hors ligne.
    À chaque mise à jour du questionnaire, changer VERSION pour que les téléphones récupèrent la nouvelle version. */
-const VERSION = 'decif-previsite-v17-2026-10-25';
+const VERSION = 'decif-previsite-v18-2026-10-28';
 const FILES = [
   './',
   './index.html',
