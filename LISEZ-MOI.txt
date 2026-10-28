@@ -1,4 +1,4 @@
-DECIF — Questionnaire de pré-visite et devis (chaudière, chauffe-eau gaz et électrique) — VERSION 18 (28/10/2026)
+DECIF — Questionnaire de pré-visite et devis (chaudière, chauffe-eau gaz et électrique) — VERSION 19 (28/10/2026)
 =====================================================================
 
 1. POUR LE WEBMASTER : MISE EN LIGNE
@@ -185,6 +185,9 @@ NOUVEAU EN VERSION 3 et 4
   • MAIN D’ŒUVRE SANS HEURES SUR LES DEVIS (tous les services) : les travaux complémentaires et le déplacement du chauffe-eau électrique se choisissent en forfaits — 4 h 1 poseur 290 € HT · 7 h 1 poseur 550 € HT · 4 h 2 poseurs 580 € HT · 7 h 2 poseurs 1 100 € HT (codes MO-4H-1P, MO-7H-1P, MO-4H-2P, MO-7H-2P, les mêmes que pour les radiateurs). Sur le devis : « Forfait main d’œuvre y compris déplacement pour : » + le travail, sans heure.
   • Textes revus selon le service : chauffe-eau gaz (« Le chauffe-eau en bref », lien notice, raccordement cheminée, électricité, entretien), fin de chantier (type d’intervention, photos demandées, contrôles ; radiateurs : pas de 30 mA ni de tension), titres des photos dans les PDF.
   • FIN DE CHANTIER SIMPLIFIÉE (chauffe-bain gaz, chauffe-eau électrique, radiateurs — la chaudière ne change pas) : 1. le chantier ; 2. contrôles = une case « Tout a été contrôlé et fonctionne » (+ pour le chauffe-bain gaz, 3 contrôles obligatoires : étanchéité gaz, CO ambiant mesuré, évacuation des fumées OK) ; 3. photos de ce qui a été fait ; 4. n° de série et n° PCE (chauffe-bain : certificat CC2 Dekra obligatoire) ; 5. avec ou sans réserves + signatures. La fiche Visa Qualité PG du chauffe-bain est remplie toute seule (rubriques sans objet + validées) et reste créée en PDF pour l’audit PG.
+
+- VERSION 19 (28/10/2026) :
+  • Photos plus nettes et lisibles : prises en 1600 pixels (au lieu de 1200) avec une meilleure qualité, et imprimées en grand (toute la largeur, presque une page par photo) dans la fiche de préparation et dans le PDF de fin de chantier : on peut zoomer pour lire un compteur ou une plaque signalétique. Les photos sont gardées dans une mémoire réservée à l’appli, avec plus de place. Ne concerne que les nouvelles photos.
 
 - VERSION 18 (28/10/2026) :
   • Sur Android, si le questionnaire est ouvert dans un navigateur qui ne sait pas partager les PDF (navigateur intégré à Drive, au lecteur PDF, à Gmail…, ou autre que Chrome), le cadre des PDF l’explique et propose « Ouvrir le questionnaire dans Chrome ». À faire une fois sur chaque Android : ouvrir le lien dans Chrome, menu ⋮ → « Installer l’application », puis toujours passer par l’icône « DECIF Visite ».
