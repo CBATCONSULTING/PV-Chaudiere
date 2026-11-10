@@ -1,9 +1,10 @@
 /* DECIF Pré-visite — fonctionnement hors ligne.
    À chaque mise à jour du questionnaire, changer VERSION pour que les téléphones récupèrent la nouvelle version. */
-const VERSION = 'decif-previsite-v19-2026-10-28';
+const VERSION = 'decif-previsite-v20-complete-2026-11-10';
 const FILES = [
   './',
   './index.html',
+  './entretien.html',
   './manifest.webmanifest',
   './pdf-lib.min.js',
   './icon-192.png',
@@ -37,10 +38,10 @@ self.addEventListener('fetch', (event) => {
       fetch(req)
         .then((res) => {
           const copy = res.clone();
-          caches.open(VERSION).then((c) => c.put('./index.html', copy));
+          caches.open(VERSION).then((c) => c.put(req, copy));
           return res;
         })
-        .catch(() => caches.match('./index.html'))
+        .catch(() => caches.match(req, { ignoreSearch: true }).then((hit) => hit || caches.match('./index.html')))
     );
     return;
   }

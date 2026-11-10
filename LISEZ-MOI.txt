@@ -1,4 +1,4 @@
-DECIF — Questionnaire de pré-visite et devis (chaudière, chauffe-eau gaz et électrique) — VERSION 19 (28/10/2026)
+DECIF — Questionnaire de pré-visite et devis (chaudière, chauffe-eau gaz et électrique) — VERSION 20 (10/11/2026)
 =====================================================================
 
 1. POUR LE WEBMASTER : MISE EN LIGNE
@@ -185,6 +185,26 @@ NOUVEAU EN VERSION 3 et 4
   • MAIN D’ŒUVRE SANS HEURES SUR LES DEVIS (tous les services) : les travaux complémentaires et le déplacement du chauffe-eau électrique se choisissent en forfaits — 4 h 1 poseur 290 € HT · 7 h 1 poseur 550 € HT · 4 h 2 poseurs 580 € HT · 7 h 2 poseurs 1 100 € HT (codes MO-4H-1P, MO-7H-1P, MO-4H-2P, MO-7H-2P, les mêmes que pour les radiateurs). Sur le devis : « Forfait main d’œuvre y compris déplacement pour : » + le travail, sans heure.
   • Textes revus selon le service : chauffe-eau gaz (« Le chauffe-eau en bref », lien notice, raccordement cheminée, électricité, entretien), fin de chantier (type d’intervention, photos demandées, contrôles ; radiateurs : pas de 30 mA ni de tension), titres des photos dans les PDF.
   • FIN DE CHANTIER SIMPLIFIÉE (chauffe-bain gaz, chauffe-eau électrique, radiateurs — la chaudière ne change pas) : 1. le chantier ; 2. contrôles = une case « Tout a été contrôlé et fonctionne » (+ pour le chauffe-bain gaz, 3 contrôles obligatoires : étanchéité gaz, CO ambiant mesuré, évacuation des fumées OK) ; 3. photos de ce qui a été fait ; 4. n° de série et n° PCE (chauffe-bain : certificat CC2 Dekra obligatoire) ; 5. avec ou sans réserves + signatures. La fiche Visa Qualité PG du chauffe-bain est remplie toute seule (rubriques sans objet + validées) et reste créée en PDF pour l’audit PG.
+
+- VERSION 20 (10/11/2026) :
+  • L’onglet 🏢 Bureau passe en premier. Les services sont partout dans le même ordre : chaudière, chauffe-eau gaz, chauffe-eau électrique, radiateurs.
+  • NOUVEAU — Page client « entretien.html » : le client remplit lui-même sa demande d’entretien sur son téléphone (coordonnées, appareil, visite ou contrat, options, photos), voit son devis, accepte les conditions générales, signe avec le doigt et nous l’envoie par mail (travaux@decif.fr). S’il ne connaît pas son appareil, il envoie seulement sa demande avec les photos.
+    Bureau → Un entretien : « Envoyer le lien par SMS / par mail » (le lien préremplit nom, téléphone, adresse), « Remplir avec le client (sur ce téléphone) », et « Importer la demande reçue d’un client (PDF) » qui remplit tout. Le PDF signé reçu = preuve de l’accord, à archiver dans le porte-documents puis saisir dans Extrabat.
+    Technicien : bouton « 🧰 Le client veut un entretien » sous le type d’intervention, pour remplir la demande avec le client (règlement sur place possible).
+  • NOUVEAU — Bureau → bouton « 🧰 Un entretien » (en haut) : visite d’entretien ponctuelle ou contrat, sans déplacement.
+    1. Quel appareil ? Si le client sait : condensation, basse NOx, chauffe-bain ou chauffe-eau électrique → on enchaîne tout de suite. S’il ne sait pas : « Il ne sait pas » → mail pour demander les photos + PDF pour le porte-documents (avec le bouton « OUVRIR LE DOSSIER ENTRETIEN »). Quand les photos arrivent : ouvrir ce PDF, toucher le bouton, regarder les photos (si pas clair : ChatGPT ou un responsable) et choisir l’appareil. Pompe à chaleur / clim : on envoie le lien du partenaire.
+    2. Visite ponctuelle ou contrat (prix sur les boutons). 3. Options : ballon UPEC, ramonage 69 €. 4. Règlement (virement, lien de paiement, sur place en exception) → « Créer le devis » + mail d’envoi au client.
+    Le devis indique le prix, ce qui est compris, ce qui est payant en plus, si la visite peut être refusée (vétusté, normes : 79 € de déplacement, ou visite ponctuelle à la place du contrat), les rappels de décrets, le règlement ; il est suivi des conditions générales d’entretien à signer. Accord du client : devis signé en photo, ou réponse « Bon pour accord » par mail, à archiver dans le porte-documents.
+    Tarifs DECIF TTC — visite / contrat : basse NOx 138 / 150 € (UPEC 178 €) ; condensation 150 / 170 € (UPEC 210 €, TVA 5,5 %) ; chauffe-bain 114 / 135 € ; chauffe-eau électrique : contrat seulement, 120 €. Ramonage en option : 69 € (basse NOx et chauffe-bain). Déplacement non justifié : 140 € (contrat) ou 79 € (sans contrat).
+    Codes Extrabat à créer : voir Codes_Extrabat_a_creer_DECIF_V21_entretien.
+  • Ramonage : le rappel (69 € TTC/an, décret n° 2023-641) est aussi mis pour un chauffe-bain raccordé à une cheminée. Prix de l’entretien proposé après la pose : chauffe-bain 135 €, basse température 150 € (178 € avec UPEC), condensation 170 € (210 € avec UPEC).
+
+  • Vérification complète, service par service (chauffe-bain gaz, chauffe-eau électrique, radiateurs) : plus aucune question ni aucun texte sur une chaudière quand on a choisi un autre service, à l’écran comme dans les PDF.
+  • Chauffe-bain gaz : si on retouchait la marque ou le type, l’appli repassait en « chaudière » (photos, forfait, électricité, aide GRDF…). Corrigé : le chauffe-bain reste un chauffe-bain, la marque reste ELM Leblanc (seule marque de chauffe-bain proposée).
+  • Chauffe-bain gaz : la « génération de l’ancienne chaudière » n’est plus demandée ; textes de la ventouse et de la cheminée écrits pour le chauffe-eau ; l’adaptateur de sortie chaudière iCONDENS et le neutraliseur de condensats ne sont plus proposés.
+  • Compte rendu du devis (chauffe-bain) : « Ancien chauffe-eau », « Le chauffe-eau proposé », « L’eau chaude sera coupée (une demi-journée) ».
+  • Fin de chantier chauffe-bain : la fiche Visa PG indique « Chauffe-eau : … posé le … » ; le dossier bureau dit « dossier chauffe-eau ».
+  • Fiche de préparation : l’explication du coût de la main-d’œuvre ne parle plus que du service choisi.
 
 - VERSION 19 (28/10/2026) :
   • Photos plus nettes et lisibles : prises en 1600 pixels (au lieu de 1200) avec une meilleure qualité, et imprimées en grand (toute la largeur, presque une page par photo) dans la fiche de préparation et dans le PDF de fin de chantier : on peut zoomer pour lire un compteur ou une plaque signalétique. Les photos sont gardées dans une mémoire réservée à l’appli, avec plus de place. Ne concerne que les nouvelles photos.
