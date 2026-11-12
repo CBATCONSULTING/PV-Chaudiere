@@ -1,4 +1,4 @@
-DECIF — Questionnaire de pré-visite et devis (chaudière, chauffe-eau gaz et électrique) — VERSION 20 (10/11/2026)
+DECIF — Questionnaire de pré-visite et devis (chaudière, chauffe-eau gaz et électrique) — VERSION 21 (12/11/2026)
 =====================================================================
 
 1. POUR LE WEBMASTER : MISE EN LIGNE
@@ -185,6 +185,11 @@ NOUVEAU EN VERSION 3 et 4
   • MAIN D’ŒUVRE SANS HEURES SUR LES DEVIS (tous les services) : les travaux complémentaires et le déplacement du chauffe-eau électrique se choisissent en forfaits — 4 h 1 poseur 290 € HT · 7 h 1 poseur 550 € HT · 4 h 2 poseurs 580 € HT · 7 h 2 poseurs 1 100 € HT (codes MO-4H-1P, MO-7H-1P, MO-4H-2P, MO-7H-2P, les mêmes que pour les radiateurs). Sur le devis : « Forfait main d’œuvre y compris déplacement pour : » + le travail, sans heure.
   • Textes revus selon le service : chauffe-eau gaz (« Le chauffe-eau en bref », lien notice, raccordement cheminée, électricité, entretien), fin de chantier (type d’intervention, photos demandées, contrôles ; radiateurs : pas de 30 mA ni de tension), titres des photos dans les PDF.
   • FIN DE CHANTIER SIMPLIFIÉE (chauffe-bain gaz, chauffe-eau électrique, radiateurs — la chaudière ne change pas) : 1. le chantier ; 2. contrôles = une case « Tout a été contrôlé et fonctionne » (+ pour le chauffe-bain gaz, 3 contrôles obligatoires : étanchéité gaz, CO ambiant mesuré, évacuation des fumées OK) ; 3. photos de ce qui a été fait ; 4. n° de série et n° PCE (chauffe-bain : certificat CC2 Dekra obligatoire) ; 5. avec ou sans réserves + signatures. La fiche Visa Qualité PG du chauffe-bain est remplie toute seule (rubriques sans objet + validées) et reste créée en PDF pour l’audit PG.
+
+- VERSION 21 (12/11/2026) :
+  • Android : l’appli reconnaît mieux un téléphone ou une tablette Android (même en « version ordinateur » ou avec Samsung DeX), pour proposer l’envoi des PDF par mail comme sur iPhone, au lieu de les enregistrer.
+  • Sur Android, si l’appli est ouverte ailleurs que dans Chrome (Samsung Internet, lien Gmail/WhatsApp…), un bandeau orange l’indique dès l’ouverture, avec le bouton « Ouvrir l’appli DECIF dans Chrome » et la marche à suivre pour installer la bonne icône.
+  • Le cadre des PDF affiche en bas une ligne « Infos appareil » (téléphone, navigateur, partage par mail oui/non, appli installée, version) : en cas de souci, envoyer une capture au bureau.
 
 - VERSION 20 (10/11/2026) :
   • L’onglet 🏢 Bureau passe en premier. Les services sont partout dans le même ordre : chaudière, chauffe-eau gaz, chauffe-eau électrique, radiateurs.
