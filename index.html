@@ -2158,6 +2158,7 @@ MES_RULES.forEach(r=>{const el=document.getElementById(r.id);if(el)el.addEventLi
 
 /* ===== Contrôle avant « Terminer » : ce qui manque, aller directement dessus ===== */
 function finProblems(){const miss=[],must=[];
+  {const d=fDate.value?new Date(fDate.value+'T12:00'):null;const ecart=d?Math.abs((Date.now()-d.getTime())/864e5):0;if(d&&ecart>3)miss.push({go:'fDate',txt:'Date de fin des travaux : '+d.toLocaleDateString('fr-FR')+' (il y a '+Math.round(ecart)+' jours). Est-ce la bonne date ? Sinon la corriger.'})}
   if(finSimple()){if(!fToutOk.checked)miss.push({go:'fToutOk',txt:'Cocher « Tout a été contrôlé et fonctionne » (sinon écrire ce qui ne va pas dans les réserves)'});
     if(isCE()){if(!fEtGaz.checked)must.push({go:'fsEtGaz',txt:'Étanchéité gaz : à contrôler et cocher (obligatoire)'});if(numv('fCOamb')==null)must.push({go:'fsCO',txt:'CO ambiant : mesure obligatoire'});if(!fsFum.checked)must.push({go:'fsFum',txt:'Évacuation des fumées : à vérifier et cocher (obligatoire)'});
       if(!fMesApp.value.trim())miss.push({go:'fsMes',txt:'Appareil de mesure non renseigné'});if(fPCE.value.replace(/\s/g,'').length!==14)miss.push({go:'fPCE',txt:'N° PCE manquant ou incomplet (14 chiffres) : obligatoire pour le certificat CC2'});if(!fSerie.value.trim())miss.push({go:'fSerie',txt:'N° de série du chauffe-bain (pour le certificat CC2)'})}

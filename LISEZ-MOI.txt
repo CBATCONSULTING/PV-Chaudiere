@@ -189,6 +189,7 @@ NOUVEAU EN VERSION 3 et 4
 - VERSION 21 (12/11/2026) :
   • Android : l’appli reconnaît mieux un téléphone ou une tablette Android (même en « version ordinateur » ou avec Samsung DeX), pour proposer l’envoi des PDF par mail comme sur iPhone, au lieu de les enregistrer.
   • Sur Android, si l’appli est ouverte ailleurs que dans Chrome (Samsung Internet, lien Gmail/WhatsApp…), un bandeau orange l’indique dès l’ouverture, avec le bouton « Ouvrir l’appli DECIF dans Chrome » et la marche à suivre pour installer la bonne icône.
+  • Fin de chantier : si la « date de fin des travaux » est vieille de plus de 3 jours (date restée d’un ancien dossier), l’appli demande de vérifier avant de faire les PDF.
   • Le cadre des PDF affiche en bas une ligne « Infos appareil » (téléphone, navigateur, partage par mail oui/non, appli installée, version) : en cas de souci, envoyer une capture au bureau.
 
 - VERSION 20 (10/11/2026) :
