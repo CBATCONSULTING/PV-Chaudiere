@@ -1,4 +1,4 @@
-DECIF — Questionnaire de pré-visite et devis (chaudière, chauffe-eau gaz et électrique) — VERSION 21 (12/11/2026)
+DECIF — Questionnaire de pré-visite et devis (chaudière, chauffe-eau gaz et électrique) — VERSION 22 (13/11/2026)
 =====================================================================
 
 1. POUR LE WEBMASTER : MISE EN LIGNE
@@ -186,10 +186,20 @@ NOUVEAU EN VERSION 3 et 4
   • Textes revus selon le service : chauffe-eau gaz (« Le chauffe-eau en bref », lien notice, raccordement cheminée, électricité, entretien), fin de chantier (type d’intervention, photos demandées, contrôles ; radiateurs : pas de 30 mA ni de tension), titres des photos dans les PDF.
   • FIN DE CHANTIER SIMPLIFIÉE (chauffe-bain gaz, chauffe-eau électrique, radiateurs — la chaudière ne change pas) : 1. le chantier ; 2. contrôles = une case « Tout a été contrôlé et fonctionne » (+ pour le chauffe-bain gaz, 3 contrôles obligatoires : étanchéité gaz, CO ambiant mesuré, évacuation des fumées OK) ; 3. photos de ce qui a été fait ; 4. n° de série et n° PCE (chauffe-bain : certificat CC2 Dekra obligatoire) ; 5. avec ou sans réserves + signatures. La fiche Visa Qualité PG du chauffe-bain est remplie toute seule (rubriques sans objet + validées) et reste créée en PDF pour l’audit PG.
 
+- VERSION 22 (13/11/2026) :
+  • Android : le bouton bleu « Ouvrir l’appli DECIF dans Chrome » (bandeau orange quand le lien
+    s’ouvre dans un autre navigateur) garde maintenant les données du chantier : la fin de chantier
+    s’ouvre dans Chrome déjà remplie (avant, elle s’ouvrait vide).
+  • Fichier d’essai local : les liens « Fin de chantier » des fiches pointent vers le site en ligne.
+  • Fin de chantier : case « Logement vide ou client absent : le PV sera signé par le donneur d’ordre » (syndic, bailleur, gestionnaire, ex. KST). Pas de signature client sur place ; le PV indique « Je soussigné(e), pour [donneur d’ordre] » et garde une case « date, signature et cachet » vide ; le dossier bureau rappelle de lui faire signer le fichier 4.
+  • Fin de chantier : les photos sont maintenant gardées dans le téléphone (avant, elles étaient perdues si la page se rechargeait, ce qui arrive sur Android en ouvrant l’appareil photo). « Nouveau chantier » les efface.
+  • Autocontrôle Visa Qualité (fiche officielle habitA+ / PG, 179 points, 23 rubriques) : bouton « Rubrique sans objet » dans chaque rubrique et « Mettre tout ce qui reste vide en sans objet ». Les 16 points importants (à vérifier un par un) et les points automatiques (6.1, 22.1) ne sont jamais cochés d’un coup.
+
 - VERSION 21 (12/11/2026) :
   • Android : l’appli reconnaît mieux un téléphone ou une tablette Android (même en « version ordinateur » ou avec Samsung DeX), pour proposer l’envoi des PDF par mail comme sur iPhone, au lieu de les enregistrer.
   • Sur Android, si l’appli est ouverte ailleurs que dans Chrome (Samsung Internet, lien Gmail/WhatsApp…), un bandeau orange l’indique dès l’ouverture, avec le bouton « Ouvrir l’appli DECIF dans Chrome » et la marche à suivre pour installer la bonne icône.
   • Fin de chantier : si la « date de fin des travaux » est vieille de plus de 3 jours (date restée d’un ancien dossier), l’appli demande de vérifier avant de faire les PDF.
+  • Photos encore plus nettes (2048 pixels, meilleure qualité) ; dans les PDF de fin de chantier, la première photo est mise sur la page du titre (plus de page « PHOTOS » vide).
   • Le cadre des PDF affiche en bas une ligne « Infos appareil » (téléphone, navigateur, partage par mail oui/non, appli installée, version) : en cas de souci, envoyer une capture au bureau.
 
 - VERSION 20 (10/11/2026) :
