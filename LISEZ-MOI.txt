@@ -1,4 +1,4 @@
-DECIF — Questionnaire de pré-visite et devis (chaudière, chauffe-eau gaz et électrique) — VERSION 22 (13/11/2026)
+DECIF — Questionnaire de pré-visite et devis (chaudière, chauffe-eau gaz et électrique) — VERSION 23 (14/11/2026)
 =====================================================================
 
 1. POUR LE WEBMASTER : MISE EN LIGNE
@@ -185,6 +185,40 @@ NOUVEAU EN VERSION 3 et 4
   • MAIN D’ŒUVRE SANS HEURES SUR LES DEVIS (tous les services) : les travaux complémentaires et le déplacement du chauffe-eau électrique se choisissent en forfaits — 4 h 1 poseur 290 € HT · 7 h 1 poseur 550 € HT · 4 h 2 poseurs 580 € HT · 7 h 2 poseurs 1 100 € HT (codes MO-4H-1P, MO-7H-1P, MO-4H-2P, MO-7H-2P, les mêmes que pour les radiateurs). Sur le devis : « Forfait main d’œuvre y compris déplacement pour : » + le travail, sans heure.
   • Textes revus selon le service : chauffe-eau gaz (« Le chauffe-eau en bref », lien notice, raccordement cheminée, électricité, entretien), fin de chantier (type d’intervention, photos demandées, contrôles ; radiateurs : pas de 30 mA ni de tension), titres des photos dans les PDF.
   • FIN DE CHANTIER SIMPLIFIÉE (chauffe-bain gaz, chauffe-eau électrique, radiateurs — la chaudière ne change pas) : 1. le chantier ; 2. contrôles = une case « Tout a été contrôlé et fonctionne » (+ pour le chauffe-bain gaz, 3 contrôles obligatoires : étanchéité gaz, CO ambiant mesuré, évacuation des fumées OK) ; 3. photos de ce qui a été fait ; 4. n° de série et n° PCE (chauffe-bain : certificat CC2 Dekra obligatoire) ; 5. avec ou sans réserves + signatures. La fiche Visa Qualité PG du chauffe-bain est remplie toute seule (rubriques sans objet + validées) et reste créée en PDF pour l’audit PG.
+
+- VERSION 23 (14/11/2026) :
+  • Devis d’entretien : les mentions légales (capital, APE, SIRET, TVA intracom, assurance MMA RC et décennale n° 124139662,
+    RGE QUALIBAT n° E146345) sont en bas de chaque page, comme sur les devis chaudière. Conditions générales : nouvelle
+    section « 10. Mentions légales » reprise des devis chaudière (médiateur, indemnité de 40 €, pièces remplacées, TVA…).
+  • Entretien, bureau : le SMS, le mail et le bouton « 📋 Copier le message avec le lien » contiennent le message complet, écrit
+    automatiquement (bonjour + nom, explication, lien, signature DECIF). Si l’appareil est déjà choisi au bureau, il est indiqué
+    dans le message et déjà sélectionné quand le client ouvre le lien.
+  • Entretien, technicien sur place : case « Le client avait réservé une visite ponctuelle et passe au contrat ».
+    La visite déjà réglée est déduite (ex. contrat 150 € − visite 138 € = 12 € à encaisser) ; encaissement par carte (SumUp),
+    chèque ou espèces ; si le virement n’est pas sûr : « appeler le bureau avant d’encaisser ». Le devis affiche « Déjà réglé » et
+    « RESTE À RÉGLER ». Ajouté aussi dans les conditions générales (Règlement).
+    Paiement par chèque : photo du chèque obligatoire (bouton « 📷 PHOTO DU CHÈQUE »), jointe au devis signé.
+  • Onglet Bureau : 5 boutons pour choisir le service (Chaudière, Chauffe-eau gaz, Chauffe-eau électrique, Radiateurs,
+    Entretien) à la place des boutons « Des travaux / Un entretien » et du menu « Type d’intervention ».
+  • Entretien : l’explication « comment savoir quel appareil » est ouverte au-dessus des boutons ; boutons simples, sans sous-texte.
+  • Entretien : le bouton « Remplir avec le client (sur ce téléphone) » s’appelle « Remplir avec le client » (téléphone ou ordinateur).
+  • Fin de chantier : PV de réception simple pour les services (chauffe-eau gaz, chauffe-eau électrique, radiateurs) :
+    « sans réserve » ou « avec réserves » et les signatures, sans « refusée » ni points de réception. Le PV chaudière ne change pas.
+  • Entretien : le ramonage n’est plus une case cochée d’avance mais un bouton « + Ajouter le ramonage — 69 € TTC ».
+    Bouton touché : le devis indique « RAMONAGE CHOISI — réglé sur place au technicien ».
+    Bouton non touché : le ramonage reste sur le devis « en option », avec une case à cocher.
+  • Entretien : la TVA et ses conditions sont écrites sur le devis : 5,5 % pour une chaudière à condensation, 10 % pour
+    les autres appareils et le ramonage. Les conditions générales et le « Bon pour accord » indiquent que le client
+    certifie que le logement est achevé depuis plus de deux ans (sinon TVA à 20 %). Prix TTC inchangés.
+  • Entretien : 3 boutons « Le logement » : plus de 2 ans (TVA réduite), logement neuf (moins de 2 ans) ou société / local
+    professionnel (TVA 20 %). En TVA 20 %, le prix HT reste le même et le TTC augmente (ex. contrat condensation
+    193,37 € TTC au lieu de 170 €). Le client doit choisir avant d’envoyer sa demande.
+  • Page client d’entretien : le choix du règlement est maintenant à la fin, après « Voir mon devis », juste avant la signature.
+  • Bureau et page client d’entretien : la ville se remplit toute seule avec le code postal (adresse et facturation).
+  • Entretien : les demandes et devis signés des clients sont envoyés à contact@decif.fr (avant : travaux@decif.fr).
+  • Bureau : le cadre « Remplir depuis Extrabat » accepte aussi le mail d’une demande reçue du site (Prénom, Nom de famille, E-mail,
+    Téléphone, Adresse, Code postal, Ville, Message) : les coordonnées se remplissent et le message va dans « Infos en plus ».
+  • Page client d’entretien : après l’envoi, la page repart de zéro. Un client avec 2 appareils reçoit 2 liens et fait 2 demandes.
 
 - VERSION 22 (13/11/2026) :
   • Android : le bouton bleu « Ouvrir l’appli DECIF dans Chrome » (bandeau orange quand le lien
