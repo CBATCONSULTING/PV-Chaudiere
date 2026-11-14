@@ -1,4 +1,4 @@
-DECIF — Questionnaire de pré-visite et devis (chaudière, chauffe-eau gaz et électrique) — VERSION 23 (14/11/2026)
+DECIF — Questionnaire de pré-visite et devis (chaudière, chauffe-eau gaz et électrique) — VERSION 24 (14/11/2026)
 =====================================================================
 
 1. POUR LE WEBMASTER : MISE EN LIGNE
@@ -185,6 +185,23 @@ NOUVEAU EN VERSION 3 et 4
   • MAIN D’ŒUVRE SANS HEURES SUR LES DEVIS (tous les services) : les travaux complémentaires et le déplacement du chauffe-eau électrique se choisissent en forfaits — 4 h 1 poseur 290 € HT · 7 h 1 poseur 550 € HT · 4 h 2 poseurs 580 € HT · 7 h 2 poseurs 1 100 € HT (codes MO-4H-1P, MO-7H-1P, MO-4H-2P, MO-7H-2P, les mêmes que pour les radiateurs). Sur le devis : « Forfait main d’œuvre y compris déplacement pour : » + le travail, sans heure.
   • Textes revus selon le service : chauffe-eau gaz (« Le chauffe-eau en bref », lien notice, raccordement cheminée, électricité, entretien), fin de chantier (type d’intervention, photos demandées, contrôles ; radiateurs : pas de 30 mA ni de tension), titres des photos dans les PDF.
   • FIN DE CHANTIER SIMPLIFIÉE (chauffe-bain gaz, chauffe-eau électrique, radiateurs — la chaudière ne change pas) : 1. le chantier ; 2. contrôles = une case « Tout a été contrôlé et fonctionne » (+ pour le chauffe-bain gaz, 3 contrôles obligatoires : étanchéité gaz, CO ambiant mesuré, évacuation des fumées OK) ; 3. photos de ce qui a été fait ; 4. n° de série et n° PCE (chauffe-bain : certificat CC2 Dekra obligatoire) ; 5. avec ou sans réserves + signatures. La fiche Visa Qualité PG du chauffe-bain est remplie toute seule (rubriques sans objet + validées) et reste créée en PDF pour l’audit PG.
+
+- VERSION 24 (14/11/2026) : tout le contenu de la V23, plus :
+  • Page client d’entretien : plus aucune consigne interne (mode d’emploi du bureau) ; textes écrits pour le client.
+  • Entretien : le ramonage choisi avec le devis est compris dans le total et réglé avec la visite, une fois la date convenue
+    (facture : ENTRETIEN_BT + RAMONAGE_69). Il peut aussi être ajouté le jour de la visite, et il est alors réglé sur place.
+  • Entretien : le client ne choisit plus de règlement. Il signe son devis et écrit ses disponibilités dans une case
+    (texte libre). Le bureau l’appelle pour convenir de la date, puis demande le règlement (virement, lien de paiement, sur place
+    en exception). Devis et conditions générales mis à jour ; plus d’IBAN sur le devis ; disponibilités sur le devis et le dossier.
+  • Entretien, bureau et téléphone : deux boutons seulement pour envoyer le lien au client, « 📋 Copier le lien pour SMS » (message court)
+    et « 📋 Copier le lien pour mail » (message complet avec signature). On colle ensuite dans Onoff, Messages ou Gmail et on envoie.
+  • Entretien : le bouton « Contrat d’entretien » n’affiche plus le prix avec ballon UPEC (la question UPEC reste dans les options).
+  • Entretien : « chaudière basse NOx » devient « chaudière basse température (non condensation) » partout (boutons, explications,
+    devis, message envoyé au client).
+  • Entretien, codes Extrabat réduits : une seule facture « visite d’entretien » dès le règlement reçu, quel que soit l’appareil
+    et le service (visite ou contrat) : ENTRETIEN_BT (TVA 10 %) ou ENTRETIEN_COND (TVA 5,5 %), au prix du devis signé.
+    Ramonage : RAMONAGE_69. Entretien impossible : avoir + DEPLACEMENT_79. Le contrat d’un an est créé si le technicien le valide.
+  • Si la V23 en ligne ne contenait pas encore un des points de la liste V23 ci-dessous, il est dans la V24.
 
 - VERSION 23 (14/11/2026) :
   • Devis d’entretien : les mentions légales (capital, APE, SIRET, TVA intracom, assurance MMA RC et décennale n° 124139662,
