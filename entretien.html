@@ -86,8 +86,21 @@
 <button type="button" class="addRow" id="cliSigClear" style="margin-top:6px">Effacer la signature</button></div>
 <button type="button" class="quote-btn" id="cliSend" style="margin-top:12px;background:#0a7a43">✅ SIGNER ET ENVOYER À DECIF</button>
 <div class="note" id="cliSt" style="font-weight:700"></div></div>
-<div class="card" id="cliThanks" style="display:none;border:2px solid #0a7a43"><div class="section-title" style="color:#0a7a43">✅ Merci !</div><p class="entExp" style="font-size:14px" id="cliThanksTxt"></p>
-<button type="button" class="addRow" id="cliAgain">Envoyer à nouveau</button></div>
+<div class="card" id="cliThanks" style="display:none;border:3px solid #0068b5"><div class="section-title" style="color:#0068b5">✉️ Dernière étape : envoyez-nous le mail</div>
+<div style="background:#fff7d6;border:1px solid #e0b400;border-radius:10px;padding:10px;font-size:14px;margin-bottom:10px"><b>⚠️ Votre demande n’est pas encore partie.</b> Elle part seulement quand vous appuyez sur <b>Envoyer</b> dans votre messagerie.</div>
+<ol style="font-size:15px;line-height:1.5;padding-left:20px;margin:0 0 10px">
+<li id="cliStep1">Touchez le bouton bleu ci-dessous : votre devis est joint automatiquement.</li>
+<li>Choisissez votre messagerie (Gmail, Mail, Outlook…).</li>
+<li>Dans <b>« À »</b>, mettez l’adresse : <b style="font-size:17px;user-select:all" id="cliAddr">contact@decif.fr</b> <button type="button" id="cliCopy" style="border:1px solid #0068b5;background:#fff;color:#0068b5;border-radius:6px;padding:3px 8px;font-weight:700">Copier</button></li>
+<li>Appuyez sur <b>Envoyer</b>.</li></ol>
+<button type="button" class="quote-btn" id="cliMail" style="background:#0068b5">✉️ OUVRIR MON MAIL (DEVIS JOINT)</button>
+<div class="note" id="cliMailSt" style="font-weight:700"></div>
+<details style="margin-top:10px;font-size:14px"><summary style="font-weight:700;cursor:pointer">Rien ne s’ouvre ou pas de pièce jointe ?</summary>
+<p class="entExp" style="font-size:14px">1. Enregistrez le devis sur votre appareil :</p><button type="button" class="addRow" id="cliDl">📥 Enregistrer mon devis (PDF)</button>
+<p class="entExp" style="font-size:14px">2. Ouvrez un mail vers DECIF, puis <b>joignez le fichier</b> enregistré (trombone 📎) :</p><button type="button" class="addRow" id="cliMailto">✉️ Écrire à contact@decif.fr</button>
+<p class="entExp" style="font-size:14px">Vous pouvez aussi nous appeler au <b>01 46 49 36 56</b>.</p></details>
+<p class="entExp" style="font-size:14px;margin-top:10px" id="cliThanksTxt"></p>
+<button type="button" class="addRow" id="cliAgain" style="display:none">Envoyer à nouveau</button></div>
 <div style="text-align:center;color:#64748b;font-size:11px;margin:10px 0 30px">SAS DECIF — Centre d’Affaires Mermoz, 293-295 boulevard Saint-Denis, 92400 Courbevoie — 01 46 49 36 56 — contact@decif.fr</div>
 </div><script src="pdf-lib.min.js"></script><script>
 const APP_URL=location.protocol==='file:'?location.href.split('#')[0]:'https://cbatconsulting.github.io/PV-Chaudiere/';
@@ -105,6 +118,8 @@ window.ENT_KEY_CLIENT='decif_entretien_client_v1';
 // Tarifs DECIF TTC validés le 10/11/2026 : p = visite ponctuelle, c = contrat annuel, cU = contrat avec ballon UPEC, ram = ramonage en option
 const ENT_TARIFS={bt:{p:138,c:150,cU:178,ram:69,tva:10},cond:{p:150,c:170,cU:210,tva:5.5},cb:{p:114,c:135,ram:69,tva:10},cee:{p:null,c:120,tva:10}};
 const ENT_DEPL=79;
+/* Envoi direct des demandes clients vers contact@decif.fr (script Google de DECIF). Vide = méthode par la messagerie du client. */
+window.ENT_SEND_URL=window.ENT_SEND_URL||'';
 /* facture à faire dès le devis signé (codes Extrabat) */
 function entFactTxt(k){const f=k.ty==='cond'?['ENTRETIEN_COND','Visite d’entretien chaudière condensation']:['ENTRETIEN_BT','Visite d’entretien basse température'];return '1 × '+f[0]+' — '+f[1]+' — '+entEur(k.ttc)+' TTC (TVA '+String(k.tva*100).replace('.',',')+' %)'+(k.of==='contrat'?' — puis créer le contrat d’un an si le technicien le valide':'')}
 let ENT_CHQ='';/* photo du chèque (passage au contrat sur place) */
@@ -292,7 +307,7 @@ function entResize(file){return new Promise((ok,ko)=>{const r=new FileReader();r
 function entPhotosRender(){const b=eid('entPhotos');b.innerHTML='';ENT_PHOTOS.forEach((p,i)=>{const d=document.createElement('div');d.style.cssText='position:relative;width:96px';
   d.innerHTML='<img src="'+p.d+'" style="width:96px;height:96px;object-fit:cover;border-radius:8px;border:1px solid #cbd5e1"><button type="button" style="position:absolute;top:2px;right:2px;background:#b42318;color:#fff;border:0;border-radius:50%;width:24px;height:24px;font-size:13px;padding:0" title="Retirer">✕</button>';
   d.querySelector('button').onclick=()=>{ENT_PHOTOS.splice(i,1);entPhotosRender()};b.appendChild(d)})}
-function entClientLink(tech){const v=id=>(eid(id)?.value||'').trim();const p={n:v('bNom'),pn:v('bPrenom'),t:v('bTel'),e:v('bMail'),a:v('bAdr'),cp:v('bCP'),v:v('bVille'),et:v('bEtage'),as:v('bAsc')==='Choisir'?'':v('bAsc'),ac:v('bAcces'),tc:v('bTech')};{const ty=entR('entType');if(['cond','bt','cb','cee'].includes(ty))p.ty=ty}
+function entClientLink(tech){const v=id=>(eid(id)?.value||'').trim();const p={n:v('bNom'),pn:v('bPrenom'),t:v('bTel'),e:v('bMail'),a:v('bAdr'),cp:v('bCP'),v:v('bVille'),et:v('bEtage'),as:v('bAsc')==='Choisir'?'':v('bAsc'),ac:v('bAcces'),tc:v('bTech')};{const ty=entR('entType');if(['cond','bt','cb','cee'].includes(ty))p.ty=ty;const ma=v('entMarque'),mo=v('entModele');if(ma)p.ma=ma;if(mo)p.mo=mo}
   const base=location.protocol==='file:'?location.href.split('#')[0].replace(/[^\/]*$/,'DECIF_ENTRETIEN_CLIENT_ESSAI.html'):APP_URL.replace(/index\.html$/,'')+'entretien.html';return base+(tech?'?tech=1':'')+'#p='+encodePrefill(p)}
 function entLink(){const o=entState();delete o.entCond;return APP_URL+'#ent='+encodePrefill(o)}
 /* --- PDF --- */
@@ -493,7 +508,7 @@ $('cliPhSpot').appendChild($('entPhotos'));$('cliPhSpot').appendChild($('entPhFi
 $('cliPhAdd').onclick=()=>$('entPhFile').click();
 /* préremplissage par le lien du bureau */
 try{const m=location.hash.match(/p=([A-Za-z0-9_-]+)/);if(m){let b=m[1].replace(/-/g,'+').replace(/_/g,'/');while(b.length%4)b+='=';const p=JSON.parse(decodeURIComponent(escape(atob(b))));
-  [['bNom','n'],['bPrenom','pn'],['bTel','t'],['bMail','e'],['bAdr','a'],['bCP','cp'],['bVille','v'],['bEtage','et'],['bAcces','ac'],['bTech','tc']].forEach(([id,k])=>{if(p[k]&&!$(id).value)$(id).value=p[k]});if(p.as)$('bAsc').value=p.as;if(p.ty)setTimeout(()=>{const r=document.querySelector('input[name=entType][value='+p.ty+']');if(r&&!entR('entType')){r.checked=true;r.dispatchEvent(new Event('change',{bubbles:true}))}},300)}}catch(e){}
+  [['bNom','n'],['bPrenom','pn'],['bTel','t'],['bMail','e'],['bAdr','a'],['bCP','cp'],['bVille','v'],['bEtage','et'],['bAcces','ac'],['bTech','tc']].forEach(([id,k])=>{if(p[k]&&!$(id).value)$(id).value=p[k]});if(p.as)$('bAsc').value=p.as;setTimeout(()=>{if(p.ma&&!$('entMarque').value){const o=[...$('entMarque').options].find(o=>o.value===p.ma||o.text===p.ma);if(o)$('entMarque').value=o.value||o.text}if(p.mo&&!$('entModele').value)$('entModele').value=p.mo;if(p.ma||p.mo){$('entModele').dispatchEvent(new Event('input',{bubbles:true}))}},350);if(p.ty)setTimeout(()=>{const r=document.querySelector('input[name=entType][value='+p.ty+']');if(r&&!entR('entType')){r.checked=true;r.dispatchEvent(new Event('change',{bubbles:true}))}},300)}}catch(e){}
 /* signature */
 const cv=$('cliSig'),ctx=cv.getContext('2d');let drawing=false,signed=false;
 const fit=()=>{const r=cv.getBoundingClientRect();if(!r.width)return;const d=window.devicePixelRatio||1;const img=signed?cv.toDataURL():null;cv.width=r.width*d;cv.height=r.height*d;ctx.scale(d,d);ctx.lineWidth=2.4;ctx.lineCap='round';ctx.strokeStyle='#0f172a';if(img){const i=new Image();i.onload=()=>ctx.drawImage(i,0,0,r.width,r.height);i.src=img}};
@@ -524,16 +539,31 @@ async function send(){const pb=check();if(pb){$('cliSt').textContent='⚠️ '+p
     const f=nsp?await entPdf('dossier',{client:1,title:'DEMANDE D’ENTRETIEN'}):await entPdf('devis',{sig:cv.toDataURL('image/png'),at,photos:1,attach:1});
     const c=entClient();const subj=(nsp?'Demande d’entretien':'Devis d’entretien signé')+' — '+((c.prenom?c.prenom+' ':'')+c.nom).trim();
     const body='Bonjour DECIF,\n\nVeuillez trouver ci-joint '+(nsp?'ma demande d’entretien avec les photos de mon appareil.':'mon devis d’entretien signé ('+at+'), avec les conditions générales acceptées et mes photos.')+(entDispo()?'\n\nMes disponibilités : '+entDispo():'')+'\n\n'+((c.prenom?c.prenom+' ':'')+c.nom).trim()+(c.tel?' — '+c.tel:'')+'\n'+c.adr;
-    try{await navigator.clipboard.writeText('contact@decif.fr')}catch(e){}
-    let ok=false;
-    if(navigator.canShare&&navigator.canShare({files:[f]})){try{await navigator.share({files:[f],title:subj,text:body+'\n\n(à envoyer à contact@decif.fr)'});ok=true}catch(e){if(e&&e.name==='AbortError'){$('cliSt').textContent='Envoi annulé : touchez à nouveau le bouton.';return}}}
-    if(!ok){const a=document.createElement('a');a.href=URL.createObjectURL(f);a.download=f.name;document.body.appendChild(a);a.click();a.remove();
-      setTimeout(()=>{location.href='mailto:contact@decif.fr?subject='+encodeURIComponent(subj)+'&body='+encodeURIComponent(body+'\n\n(Pièce jointe : '+f.name+')')},500)}
+    if(window.ENT_SEND_URL){b.textContent='Envoi à DECIF…';let direct=false;
+      try{const b64=await new Promise((ok2,ko)=>{const r=new FileReader();r.onload=()=>ok2(String(r.result).split(',')[1]);r.onerror=ko;r.readAsDataURL(f)});
+        const r=await fetch(window.ENT_SEND_URL,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify({k:'DECIF-ENTRETIEN',subject:subj,body,filename:f.name,pdf:b64,client:c.mail||'',nom:((c.prenom?c.prenom+' ':'')+c.nom).trim()})});
+        const j=await r.json();direct=!!(j&&j.ok)}catch(e){direct=false}
+      if(direct){try{localStorage.removeItem(ENT_KEY)}catch(e){}
+        $('cliThanks').style.display='';$('cliThanksTxt').innerHTML='<b>✅ '+(nsp?'Votre demande est bien envoyée à DECIF.':'Votre devis signé est bien envoyé à DECIF.')+'</b>'+(c.mail?'<br>Une copie vous a été envoyée à <b>'+c.mail+'</b>.':'')+'<br><br>Nous vous appelons pour convenir de la date de la visite. Le règlement vous sera demandé ensuite (virement ou lien de paiement).'+(nsp?' Nous vous envoyons d’abord le devis.':'')+'<br><br>Vous avez <b>un 2e appareil</b> ? Ouvrez le 2e lien que nous vous avons envoyé et faites de même.';
+        $('cliAgain').style.display='none';$('cliThanks').scrollIntoView({block:'start'});return}
+      b.textContent='Préparation…'}
     try{localStorage.removeItem(ENT_KEY)}catch(e){}/* un 2e lien (2e appareil) repart de zéro */
-    $('cliThanks').style.display='';$('cliThanksTxt').innerHTML=(ok?'Choisissez votre messagerie, mettez l’adresse <b>contact@decif.fr</b> (déjà copiée) et envoyez.':'Le fichier <b>'+f.name+'</b> a été téléchargé et votre messagerie s’ouvre : <b>joignez ce fichier</b> au mail pour <b>contact@decif.fr</b> et envoyez.')+'<br><br>Dès réception, nous vous appelons pour convenir de la date de la visite. Le règlement vous sera demandé ensuite (virement ou lien de paiement).'+'<br><br>Vous avez <b>un 2e appareil</b> ? Ouvrez le 2e lien que nous vous avons envoyé et faites de même.'+(nsp?' Nous vous envoyons d’abord le devis.':'');
+    window.__cli={f,subj,body};
+    $('cliSignArea').style.display='none';$('cliSend').style.display='none';
+    const canSh=!!(navigator.canShare&&navigator.canShare({files:[f]}));
+    if(!canSh){$('cliMail').textContent='📥 ENREGISTRER MON DEVIS PUIS ÉCRIRE À DECIF';$('cliStep1').innerHTML='Touchez le bouton bleu ci-dessous : votre devis est enregistré et votre messagerie s’ouvre. <b>Joignez le fichier</b> (trombone 📎).'}
+    $('cliThanks').style.display='';
+    $('cliThanksTxt').innerHTML='Dès réception, nous vous appelons pour convenir de la date de la visite. Le règlement vous sera demandé ensuite (virement ou lien de paiement).'+(nsp?' Nous vous envoyons d’abord le devis.':'')+'<br><br>Vous avez <b>un 2e appareil</b> ? Ouvrez le 2e lien que nous vous avons envoyé et faites de même.';
     $('cliThanks').scrollIntoView({block:'start'})}
   catch(e){$('cliSt').textContent='Impossible de préparer le document : '+e.message}finally{b.disabled=false;b.textContent=old}}
 $('cliSend').onclick=send;$('cliAgain').onclick=send;
+function cliDl(){const x=window.__cli;if(!x)return;const a=document.createElement('a');a.href=URL.createObjectURL(x.f);a.download=x.f.name;document.body.appendChild(a);a.click();a.remove()}
+function cliMailto(){const x=window.__cli;if(!x)return;location.href='mailto:contact@decif.fr?subject='+encodeURIComponent(x.subj)+'&body='+encodeURIComponent(x.body+'\n\n(Pièce jointe : '+x.f.name+')')}
+$('cliCopy').onclick=async()=>{try{await navigator.clipboard.writeText('contact@decif.fr');$('cliCopy').textContent='✅ Copiée'}catch(e){const r=document.createRange();r.selectNodeContents($('cliAddr'));const s=getSelection();s.removeAllRanges();s.addRange(r);$('cliCopy').textContent='Sélectionnée'}};
+$('cliDl').onclick=cliDl;$('cliMailto').onclick=cliMailto;
+$('cliMail').onclick=async()=>{const x=window.__cli;if(!x)return;try{await navigator.clipboard.writeText('contact@decif.fr')}catch(e){}
+  if(navigator.canShare&&navigator.canShare({files:[x.f]})){try{await navigator.share({files:[x.f],title:x.subj,text:'À envoyer à : contact@decif.fr\n\n'+x.body});$('cliMailSt').innerHTML='Vous avez appuyé sur <b>Envoyer</b> ? C’est terminé, merci ! Sinon, touchez à nouveau le bouton bleu.';}catch(e){$('cliMailSt').textContent=(e&&e.name==='AbortError')?'Envoi annulé : touchez à nouveau le bouton bleu.':'Le partage ne marche pas ici : utilisez « Rien ne s’ouvre ? » juste en dessous.'}return}
+  cliDl();setTimeout(cliMailto,700);$('cliMailSt').innerHTML='Le devis a été enregistré sur votre appareil et votre messagerie s’ouvre : <b>joignez le fichier</b> (trombone 📎) puis envoyez.'};
 upd();setTimeout(fit,200);
 })();
 
