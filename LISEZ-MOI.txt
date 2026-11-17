@@ -1,4 +1,4 @@
-DECIF — Questionnaire de pré-visite et devis (chaudière, chauffe-eau gaz et électrique) — VERSION 25 (16/11/2026)
+DECIF — Questionnaire de pré-visite et devis (chaudière, chauffe-eau gaz et électrique) — VERSION 26 (16/11/2026)
 =====================================================================
 
 1. POUR LE WEBMASTER : MISE EN LIGNE
@@ -186,7 +186,27 @@ NOUVEAU EN VERSION 3 et 4
   • Textes revus selon le service : chauffe-eau gaz (« Le chauffe-eau en bref », lien notice, raccordement cheminée, électricité, entretien), fin de chantier (type d’intervention, photos demandées, contrôles ; radiateurs : pas de 30 mA ni de tension), titres des photos dans les PDF.
   • FIN DE CHANTIER SIMPLIFIÉE (chauffe-bain gaz, chauffe-eau électrique, radiateurs — la chaudière ne change pas) : 1. le chantier ; 2. contrôles = une case « Tout a été contrôlé et fonctionne » (+ pour le chauffe-bain gaz, 3 contrôles obligatoires : étanchéité gaz, CO ambiant mesuré, évacuation des fumées OK) ; 3. photos de ce qui a été fait ; 4. n° de série et n° PCE (chauffe-bain : certificat CC2 Dekra obligatoire) ; 5. avec ou sans réserves + signatures. La fiche Visa Qualité PG du chauffe-bain est remplie toute seule (rubriques sans objet + validées) et reste créée en PDF pour l’audit PG.
 
-- VERSION 25 (16/11/2026) :
+- VERSION 26 (16/11/2026) : remplace la V25 (jamais mise en ligne) et contient tout ce qui suit.
+   • Devis estimatif (case « 📷 Devis estimatif » au bureau) : PAS de signature ni de règlement. Le bloc « Bon pour accord »
+     est remplacé par un cadre « Devis estimatif — pas de signature ni de règlement à ce stade : demandez votre pré-visite
+     gratuite » ; plus d’acompte ni d’IBAN ; « TOTAL ESTIMÉ TTC ». Le devis définitif est fait après la pré-visite (avec
+     l’appli, comme d’habitude) : c’est lui que le client signe, avec l’acompte.
+   • Fin de chantier : le n° PCE du compteur gaz est RETIRÉ (le certificat CC2 Dekra modèle 2 ne l’exige pas, et il n’est
+     pas sur le compteur). La fiche Dekra du bureau indique « Non requis (laisser la case vide) ».
+   • PRÉ-VISITE : le devis ne s’enregistre plus tant que ces points ne sont pas faits (liste rouge cliquable au-dessus du
+     bouton « Enregistrer ») :
+       - nom et prénom séparés et propres (pas « locataire », pas le nom dans le prénom) ;
+       - adresse = n° et rue seulement ; code postal (5 chiffres) et ville dans leurs cases ;
+       - téléphone (10 chiffres) et e-mail (ou case « Le client n’a pas d’e-mail ») ;
+       - nouveau choix « Le client est… » : propriétaire occupant, locataire, ou agence/syndic/bailleur qui paie (alors nom
+         et contact du payeur obligatoires ; la facturation n’est plus « au nom du chantier ») ;
+       - chaudière / chauffe-eau gaz : photo de l’appareil + photo du raccordement des fumées (sauf devis estimatif),
+         sortie des fumées choisie, et diamètre de la cheminée existante si cheminée ; chauffe-eau électrique : photo ;
+       - pas de ligne ajoutée à la main qui reprend un article déjà dans la liste (changer la quantité à la place) ;
+       - pas de thermostat dans les lignes de plomberie (le choisir dans « 7. Régulation », sinon appeler le bureau).
+   • Fin de chantier : sur le PV, le « représentant de DECIF » est le technicien choisi dans la liste (plus de saisie à la
+     main, fini « Djilali.meloui ») ; la case « Tirage » disparaît pour une ventouse (type C) et n’est plus imprimée.
+  Contenu prévu en V25 (repris dans la V26) :
    • Page client d’entretien : nouvelle « Dernière étape : envoyez-nous le mail » après la signature. Le client voit clairement
      que sa demande n’est pas encore partie, avec 4 étapes (bouton bleu → messagerie → « À » : contact@decif.fr, avec bouton
      Copier → Envoyer). Le devis est joint automatiquement (menu de partage, Android et iPhone). Si rien ne s’ouvre :
@@ -196,6 +216,13 @@ NOUVEAU EN VERSION 3 et 4
    • Pré-visite : les photos de la visite suivent le dossier même quand le bureau corrige le nom du client (avant, elles
      disparaissaient au rechargement de la page).
    • Tous les PDF et messages : contact@decif.fr à la place de travaux@decif.fr.
+   • Bureau : case « 📷 Devis estimatif (fait sur photos, sans visite) ». Le devis porte « ESTIMATIF », la mention
+     « établi d’après vos photos » et l’obligation d’une pré-visite gratuite et sans engagement avant toute commande.
+     Bouton « 📋 Copier le mail du devis estimatif » : texte prêt à coller pour le client (montant, remise, garanties,
+     pré-visite obligatoire) ; joindre le devis PDF.
+   • Devis de remplacement d’un appareil au gaz (chaudière ou chauffe-eau gaz) : TVA à 20 % (énergie fossile, depuis le
+     01/03/2025), avec la mention « TVA 20 % : appareil fonctionnant au gaz, énergie fossile (CGI art. 279-0 bis) ».
+     Chauffe-eau électrique et radiateurs : 10 % (logement de plus de 2 ans).
 
 - VERSION 24 (14/11/2026) : tout le contenu de la V23, plus :
   • Page client d’entretien : plus aucune consigne interne (mode d’emploi du bureau) ; textes écrits pour le client.
