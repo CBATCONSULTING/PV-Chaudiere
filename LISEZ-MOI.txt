@@ -1,4 +1,4 @@
-DECIF — Questionnaire de pré-visite et devis (chaudière, chauffe-eau gaz et électrique) — VERSION 26 (16/11/2026)
+DECIF — Questionnaire de pré-visite et devis (chaudière, chauffe-eau gaz et électrique) — VERSION 27 (19/11/2026)
 =====================================================================
 
 1. POUR LE WEBMASTER : MISE EN LIGNE
@@ -186,6 +186,17 @@ NOUVEAU EN VERSION 3 et 4
   • Textes revus selon le service : chauffe-eau gaz (« Le chauffe-eau en bref », lien notice, raccordement cheminée, électricité, entretien), fin de chantier (type d’intervention, photos demandées, contrôles ; radiateurs : pas de 30 mA ni de tension), titres des photos dans les PDF.
   • FIN DE CHANTIER SIMPLIFIÉE (chauffe-bain gaz, chauffe-eau électrique, radiateurs — la chaudière ne change pas) : 1. le chantier ; 2. contrôles = une case « Tout a été contrôlé et fonctionne » (+ pour le chauffe-bain gaz, 3 contrôles obligatoires : étanchéité gaz, CO ambiant mesuré, évacuation des fumées OK) ; 3. photos de ce qui a été fait ; 4. n° de série et n° PCE (chauffe-bain : certificat CC2 Dekra obligatoire) ; 5. avec ou sans réserves + signatures. La fiche Visa Qualité PG du chauffe-bain est remplie toute seule (rubriques sans objet + validées) et reste créée en PDF pour l’audit PG.
 
+- VERSION 27 (19/11/2026) :
+  • Devis : l'option (thermostat / régulation) est dans un cadre orange « EN OPTION — NON COMPRIS DANS LE PRIX DU DEVIS », prix précédés de « + », case « Je souhaite ajouter cette option » ; sous le net à payer : « Avec l'option : … TTC ».
+  • Nouvelle case (partie 8, Cordiste) « Copropriété : autorisation écrite du syndic obligatoire » — cochée d'office si cordiste = oui. Imprime le cadre « CONDITION — AUTORISATION DU SYNDIC OBLIGATOIRE » sous le bon pour accord, et sur la fiche interne « ATTENDRE L'AUTORISATION ÉCRITE DU SYNDIC avant de commander ».
+  • Nom du client écrit tout seul en MAJUSCULES et prénom avec une majuscule (« beguigne sarah » → « BEGUIGNE » / « Sarah », « jean-pierre » → « Jean-Pierre »), en quittant la case — pré-visite, bureau et entretien.
+  • Bouton « OUVRIR LE DOSSIER ENTRETIEN » des demandes client : le lien est maintenant en « ?ent=… » (avant « #ent=… », que l'aperçu PDF de Gmail coupait : l'appli s'ouvrait vide).
+  • Devis d'entretien : le ramonage non choisi sort dans un cadre orange « EN OPTION — NON COMPRIS DANS LE PRIX » (« ne sera fait que si vous le demandez », prix en +, « revenez au questionnaire et touchez le bouton + Ajouter le ramonage »). Plus de ramonage ajouté le jour de la visite (pas le temps prévu) : textes du devis et des conditions corrigés.
+  • 2e DEVIS POUR LE MÊME CLIENT : case « 2e devis pour ce même client ? Nom de la variante » (sous « Devis estimatif »). Ex. « passage toiture » : nouveau n° de devis, ligne « Variante : … » sous le titre, et les PDF s'appellent « 2B - NOM Prénom - Devis … - passage toiture - date.pdf » et « 3B - … » (les 2 et 3 du 1er devis restent intacts) (plus de « le fichier existe déjà » sur le téléphone, plus besoin de mettre un faux nom).
+  • DEVIS ESTIMATIF : sous la case « Devis estimatif », une case de texte libre « Conditions de l’estimatif » (ex. contre-visite payante 160 € TTC déductible, découpe du faux plafond, ramonage 69 € non déductible…). Remplie : ce texte est imprimé en orange en tête du devis, sous le n°, à la place de « pré-visite gratuite », et la date de visite reste affichée. Vide : texte habituel (photos, pré-visite gratuite).
+  • « 1re visite d’entretien offerte » IMPOSÉE sur tous les devis chaudière et chauffe-eau gaz : toujours cochée, non modifiable (le technicien ne peut plus l'oublier). Puis tarif du contrat (ex. 170 € TTC/an en condensation).
+  • Libellé main d'œuvre corrigé : « dépose et enlèvement de votre ancienne chaudière gaz non condensation, remplacée par une chaudière à très haute performance énergétique ».
+
 - VERSION 26 (16/11/2026) : remplace la V25 (jamais mise en ligne) et contient tout ce qui suit.
    • Devis estimatif (case « 📷 Devis estimatif » au bureau) : PAS de signature ni de règlement. Le bloc « Bon pour accord »
      est remplacé par un cadre « Devis estimatif — pas de signature ni de règlement à ce stade : demandez votre pré-visite
@@ -206,6 +217,10 @@ NOUVEAU EN VERSION 3 et 4
        - pas de thermostat dans les lignes de plomberie (le choisir dans « 7. Régulation », sinon appeler le bureau).
    • Fin de chantier : sur le PV, le « représentant de DECIF » est le technicien choisi dans la liste (plus de saisie à la
      main, fini « Djilali.meloui ») ; la case « Tirage » disparaît pour une ventouse (type C) et n’est plus imprimée.
+   • Fin de chantier, signature du client : nouvelle case « Client absent : le client signera le PV plus tard ». Le PV sort
+     avec une case « Le maître d’ouvrage (client) : date et signature » vide, et la fiche bureau indique « À FAIRE SIGNER par
+     le client : lui envoyer le fichier 4 ». Si l’agence signe : case « donneur d’ordre » (comme avant). Sinon, la signature
+     du client doit être une vraie signature : un point ou un petit trait est refusé.
   Contenu prévu en V25 (repris dans la V26) :
    • Page client d’entretien : nouvelle « Dernière étape : envoyez-nous le mail » après la signature. Le client voit clairement
      que sa demande n’est pas encore partie, avec 4 étapes (bouton bleu → messagerie → « À » : contact@decif.fr, avec bouton
