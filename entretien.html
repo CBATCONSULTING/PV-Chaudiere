@@ -23,8 +23,8 @@
 <div id="entCard" style="display:none;margin-top:12px">
 <div style="border:2px solid #0069b4;border-radius:10px;padding:10px;background:#fff">
 <div class="section-title" style="color:#0069b4;margin:0 0 4px">🧰 Demande d’entretien</div>
-<div class="hint" style="margin:0 0 6px">Créer d’abord le client dans Extrabat et coller sa fiche ci-dessus. Ensuite, 4 questions.</div>
-<div id="entLnkBox" style="background:#f0fbf4;border:2px dashed #0a7a43;border-radius:10px;padding:10px;margin:4px 0 10px"><div style="font-weight:800;color:#0a7a43">📱 Le plus simple : le client remplit lui-même</div><div class="entExp" style="margin-top:4px">Après avoir collé sa fiche Extrabat (nom, téléphone, e-mail), lui envoyer le lien : il choisit sa prestation, prend ses photos, signe son devis en ligne et nous le renvoie. Il reçoit le lien par SMS ou par mail.</div><div class="grid"><button type="button" class="addRow" id="entLnkSms" style="font-weight:800">📋 Copier le lien pour SMS</button><button type="button" class="addRow" id="entLnkMail" style="font-weight:800">📋 Copier le lien pour mail</button><button type="button" class="addRow" id="entLnkTech">👷 Remplir avec le client</button></div><div id="entLnkInfo" class="entExp" style="display:none;margin-top:8px;background:#fff;border:1px solid #9db4d0;border-radius:8px;padding:8px"></div><button type="button" class="addRow" id="entImport" style="margin-top:8px;font-weight:800">📥 Importer la demande reçue d’un client (PDF)</button></div>
+<div class="hint" style="margin:0 0 6px">Pas de fiche Extrabat à créer pour l’instant : coller la demande du client (mail, formulaire du site) ci-dessus, ou remplir ses coordonnées. La fiche Extrabat se crée quand le devis signé revient.</div>
+<div id="entLnkBox" style="background:#f0fbf4;border:2px dashed #0a7a43;border-radius:10px;padding:10px;margin:4px 0 10px"><div style="font-weight:800;color:#0a7a43">📱 Le plus simple : le client remplit lui-même</div><div class="entExp" style="margin-top:4px">Après avoir rempli ses coordonnées (nom, téléphone, e-mail), lui envoyer le lien : il choisit sa prestation, prend ses photos, signe son devis en ligne et nous le renvoie. Il reçoit le lien par SMS ou par mail.</div><div class="grid"><button type="button" class="addRow" id="entLnkSms" style="font-weight:800">📋 Copier le lien pour SMS</button><button type="button" class="addRow" id="entLnkMail" style="font-weight:800">📋 Copier le lien pour mail</button><button type="button" class="addRow" id="entLnkTech">👷 Remplir avec le client</button></div><div id="entLnkInfo" class="entExp" style="display:none;margin-top:8px;background:#fff;border:1px solid #9db4d0;border-radius:8px;padding:8px"></div><button type="button" class="addRow" id="entImport" style="margin-top:8px;font-weight:800">📥 Importer la demande reçue d’un client (PDF)</button></div>
 <div class="note" id="entSt2" style="font-weight:700"></div>
 
 <div class="entStep" style="border-top:0;margin-top:4px;padding-top:0"><div class="entQ">1. Quel appareil a le client ?</div><p class="entExp">S’il le sait, choisir directement. S’il ne sait pas, toucher « Il ne sait pas » : on lui demande des photos.</p>
@@ -578,6 +578,75 @@ $('cliMail').onclick=async()=>{const x=window.__cli;if(!x)return;try{await navig
   if(navigator.canShare&&navigator.canShare({files:[x.f]})){try{await navigator.share({files:[x.f],title:x.subj,text:'À envoyer à : contact@decif.fr\n\n'+x.body});$('cliMailSt').innerHTML='Vous avez appuyé sur <b>Envoyer</b> ? C’est terminé, merci ! Sinon, touchez à nouveau le bouton bleu.';}catch(e){$('cliMailSt').textContent=(e&&e.name==='AbortError')?'Envoi annulé : touchez à nouveau le bouton bleu.':'Le partage ne marche pas ici : utilisez « Rien ne s’ouvre ? » juste en dessous.'}return}
   cliDl();setTimeout(cliMailto,700);$('cliMailSt').innerHTML='Le devis a été enregistré sur votre appareil et votre messagerie s’ouvre : <b>joignez le fichier</b> (trombone 📎) puis envoyez.'};
 upd();setTimeout(fit,200);
+})();
+
+</script><script>
+/* ===== V28 : page client « demande de devis chauffe-eau électrique » (lien du bureau avec k:'cee') ===== */
+(function(){
+const $=id=>document.getElementById(id);
+let P=null;try{const m=location.hash.match(/p=([A-Za-z0-9_-]+)/);if(m){let b=m[1].replace(/-/g,'+').replace(/_/g,'/');while(b.length%4)b+='=';P=JSON.parse(decodeURIComponent(escape(atob(b))))}}catch(e){}
+if(!P||P.k!=='cee')return;
+document.body.classList.add('cliCee');
+/* textes */
+const intro=$('cliIntro');if(intro)intro.innerHTML='<div class="section-title" style="color:#0069b4">🔌 Votre demande de devis : chauffe-eau électrique</div><p class="entExp" style="font-size:14px">En 3 minutes : vérifiez vos coordonnées, prenez quelques photos de votre chauffe-eau et, si vous la connaissez, indiquez sa taille. <b>Rien n’est obligatoire</b> : « je ne sais pas » est toujours possible. Nous vous envoyons ensuite un devis estimatif.</p>';
+['cliEnt','cliSign'].forEach(id=>{const e=$(id);if(e){e.style.display='none';e.dataset.ceeHide='1'}});
+const st=document.createElement('style');st.textContent='body.cliCee #cliEnt,body.cliCee #cliSign{display:none!important}.ceeQ{font-weight:700;margin:12px 0 6px}.ceePills{display:flex;flex-wrap:wrap;gap:8px}.ceePills label{border:2px solid #cbd5e1;border-radius:999px;padding:8px 14px;font-weight:600;cursor:pointer;background:#fff}.ceePills input{display:none}.ceePills label:has(input:checked){border-color:#0069b4;background:#e8f1fb;color:#0069b4}';document.head.appendChild(st);
+/* questions (toutes facultatives) */
+const pills=(name,opts)=>'<div class="ceePills">'+opts.map(o=>'<label><input type="radio" name="'+name+'" value="'+o+'"><span>'+o+'</span></label>').join('')+'</div>';
+const card=document.createElement('div');card.className='card';card.id='cliCee';
+card.innerHTML='<div class="section-title">2. Votre chauffe-eau <small style="font-weight:400">(si vous savez — sinon passez)</small></div>'+
+ '<p class="entExp">La contenance est écrite sur la plaque (l’étiquette sur le côté ou en dessous du ballon), par exemple « 150 L ». Si vous l’avez prise en photo, inutile de répondre.</p>'+
+ '<div class="ceeQ">Sa contenance</div>'+pills('ceeL',['50 L','75-80 L','100 L','150 L','200 L','300 L','Je ne sais pas'])+
+ '<div class="ceeQ">Sa forme</div>'+pills('ceeF',['Vertical, accroché au mur','Vertical, posé au sol','Horizontal (couché)','Je ne sais pas'])+
+ '<div class="ceeQ">Sa hauteur, à peu près</div>'+pills('ceeH',['Moins de 80 cm','Environ 1 m','Environ 1,20 m','Environ 1,50 m ou plus','Je ne sais pas'])+
+ '<div class="ceeQ">Combien de personnes dans le logement ?</div>'+pills('ceeP',['1','2','3','4','5 ou plus'])+
+ '<div class="ceeQ">Où est-il ?</div>'+pills('ceeO',['Salle de bain','Cuisine','Placard','Cellier / buanderie','Combles / grenier','Autre'])+
+ '<div class="ceeQ">Quelque chose à nous dire ? <small style="font-weight:400">(panne, fuite, accès difficile…)</small></div><textarea id="ceeRem" rows="3" style="width:100%;box-sizing:border-box"></textarea>';
+const ph=$('cliPhotos');ph.parentNode.insertBefore(card,ph);
+/* photos */
+$('cliPhList').innerHTML=['Le chauffe-eau en entier, de face','La plaque signalétique (l’étiquette avec la contenance en litres, la marque, le modèle)','Le dessous du ballon : le groupe de sécurité et les tuyaux','L’emplacement et l’accès : la pièce, la porte du placard, l’espace autour','Le tableau électrique ou le disjoncteur du chauffe-eau (si vous le trouvez)'].map(t=>'<li>'+t+'</li>').join('');
+const need=$('cliPhNeed');if(need)need.textContent='(conseillées)';
+/* envoi */
+const box=document.createElement('div');box.className='card';box.id='cliCeeSend';
+box.innerHTML='<div class="section-title">📤 Envoyer votre demande</div><p class="entExp" style="font-size:14px">Nous regardons vos photos et vous envoyons le devis estimatif par mail. Rien à signer ni à régler à ce stade.</p><button type="button" class="quote-btn" id="ceeSend" style="background:#0a7a43">📤 ENVOYER MA DEMANDE À DECIF</button><div class="note" id="ceeSt" style="font-weight:700"></div>';
+const th=$('cliThanks');th.parentNode.insertBefore(box,th);
+const r=n=>(document.querySelector('input[name='+n+']:checked')||{}).value||'';
+const v=id=>($(id)?.value||'').trim();
+const clean=s=>String(s||'').normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/[^A-Za-z0-9 '-]/g,' ').replace(/\s+/g,' ').trim();
+async function pdf(){const {PDFDocument,StandardFonts,rgb}=PDFLib;const doc=await PDFDocument.create();const F=await doc.embedFont(StandardFonts.Helvetica),B=await doc.embedFont(StandardFonts.HelveticaBold);
+ const cs=new Set(F.getCharacterSet());const T=s=>String(s??'').replace(/[’‘]/g,"'").replace(/[“”«»]/g,'"').replace(/[—–]/g,'-').replace(/…/g,'...').split('').map(c=>cs.has(c.codePointAt(0))?c:(c===' '||c===' '?' ':'?')).join('');
+ const W=595.28,H=841.89,M=42,blue=rgb(0,.41,.71),ink=rgb(.07,.09,.15),grey=rgb(.39,.45,.53);
+ const wrap=(t,f,s,w)=>{const out=[];String(t).split('\n').forEach(par=>{let line='';T(par).split(' ').forEach(wd=>{const tr=line?line+' '+wd:wd;if(f.widthOfTextAtSize(tr,s)>w&&line){out.push(line);line=wd}else line=tr});out.push(line)});return out};
+ let head=null;try{const rr=await fetch('entete_decif.jpg');if(rr.ok)head=await doc.embedJpg(await rr.arrayBuffer())}catch(e){}
+ const foot=pg=>pg.drawText(T('SAS DECIF - Centre d’Affaires Mermoz, 293-295 boulevard Saint-Denis, 92400 Courbevoie - 01 46 49 36 56 - contact@decif.fr'),{x:M,y:24,size:7.5,font:F,color:grey});
+ let page=doc.addPage([W,H]);let y=H-M;
+ if(head){const hw=W-2*M,hh=hw*head.height/head.width;page.drawImage(head,{x:M,y:y-hh,width:hw,height:hh});y-=hh+18}
+ const ctr=(t,f,s,c)=>{const tt=T(t);page.drawText(tt,{x:(W-f.widthOfTextAtSize(tt,s))/2,y:y-s,size:s,font:f,color:c||ink});y-=s+8};
+ ctr('DEMANDE DE DEVIS — CHAUFFE-EAU ÉLECTRIQUE',B,16,blue);ctr('Envoyée par le client le '+new Date().toLocaleDateString('fr-FR'),F,10,grey);y-=6;
+ const kv=(k,val)=>{if(!val)return;const l=wrap(val,F,10.5,W-2*M-170);page.drawText(T(k),{x:M,y:y-11,size:10.5,font:B,color:ink});l.forEach((x,i)=>page.drawText(x,{x:M+170,y:y-11-i*14,size:10.5,font:F,color:ink}));y-=l.length*14+6};
+ const sec=t=>{y-=6;page.drawText(T(t),{x:M,y:y-12,size:12,font:B,color:blue});y-=20};
+ sec('Le client');kv('Client',[v('bNom').toUpperCase(),v('bPrenom')].filter(Boolean).join(' '));kv('Adresse',[v('bAdr'),v('bCP'),v('bVille')].filter(Boolean).join(' '));kv('Téléphone',v('bTel'));kv('E-mail',v('bMail'));
+ kv('Accès',[v('bEtage')?'Étage '+v('bEtage'):'',v('bAsc')&&v('bAsc')!=='Choisir'?'ascenseur : '+v('bAsc'):'',v('bAcces')].filter(Boolean).join(' - '));
+ sec('Son chauffe-eau (réponses du client)');
+ kv('Contenance',r('ceeL')||'non renseignée');kv('Forme',r('ceeF')||'non renseignée');kv('Hauteur',r('ceeH')||'non renseignée');kv('Personnes',r('ceeP')||'non renseigné');kv('Emplacement',r('ceeO')||'non renseigné');kv('Remarque',v('ceeRem'));
+ kv('Photos',ENT_PHOTOS.length?ENT_PHOTOS.length+' photo(s) dans les pages suivantes':'aucune photo envoyée');
+ y-=8;wrap('Pour le bureau : faire un devis estimatif « Chauffe-eau électrique » (mode Technicien, case « Devis estimatif »). Pas de fiche Extrabat tant que le devis signé n’est pas revenu ; ensuite, ranger dans le dossier DOSSIER CHANTIER.',F,9,W-2*M).forEach(l=>{page.drawText(l,{x:M,y:y-10,size:9,font:F,color:grey});y-=12});
+ foot(page);
+ for(const p of ENT_PHOTOS){try{const im=await entImg(doc,p.d);const pg=doc.addPage([W,H]);pg.drawText(T('Photo du client'),{x:M,y:H-M-10,size:11,font:B,color:blue});const mw=W-2*M,mh=H-2*M-60;const sc=Math.min(mw/im.width,mh/im.height);pg.drawImage(im,{x:M+(mw-im.width*sc)/2,y:H-M-30-im.height*sc,width:im.width*sc,height:im.height*sc});foot(pg)}catch(e){}}
+ const d=new Date(),p2=n=>String(n).padStart(2,'0');const name='1 - '+clean([v('bNom').toUpperCase(),v('bPrenom')].filter(Boolean).join(' ')||'CLIENT')+' - Demande chauffe-eau electrique - '+p2(d.getDate())+'-'+p2(d.getMonth()+1)+'-'+d.getFullYear()+'.pdf';
+ return new File([await doc.save()],name,{type:'application/pdf'})}
+$('ceeSend').onclick=async()=>{if(!v('bNom')){$('ceeSt').textContent='⚠️ Indiquez votre nom en haut de la page.';$('bNom').scrollIntoView({block:'center'});return}
+ if(!v('bTel')&&!v('bMail')){$('ceeSt').textContent='⚠️ Indiquez un téléphone ou un e-mail pour que nous puissions vous répondre.';$('bTel').scrollIntoView({block:'center'});return}
+ const b=$('ceeSend'),old=b.textContent;b.disabled=true;b.textContent='Préparation…';$('ceeSt').textContent='';
+ try{const f=await pdf();const nm=[v('bPrenom'),v('bNom')].filter(Boolean).join(' ');const subj='Demande de devis chauffe-eau électrique — '+nm;
+  const body='Bonjour DECIF,\n\nVeuillez trouver ci-joint ma demande de devis pour le remplacement de mon chauffe-eau électrique, avec mes photos.\n\n'+nm+(v('bTel')?' — '+v('bTel'):'')+'\n'+[v('bAdr'),v('bCP'),v('bVille')].filter(Boolean).join(' ');
+  window.__cli={f,subj,body};box.style.display='none';
+  const canSh=!!(navigator.canShare&&navigator.canShare({files:[f]}));
+  if(!canSh){$('cliMail').textContent='📥 ENREGISTRER MA DEMANDE PUIS ÉCRIRE À DECIF';$('cliStep1').innerHTML='Touchez le bouton bleu ci-dessous : votre demande est enregistrée et votre messagerie s’ouvre. <b>Joignez le fichier</b> (trombone 📎).'}
+  else{$('cliMail').textContent='✉️ OUVRIR MON MAIL (DEMANDE JOINTE)';$('cliStep1').textContent='Touchez le bouton bleu ci-dessous : votre demande et vos photos sont jointes automatiquement.'}
+  $('cliThanks').style.display='';$('cliThanksTxt').innerHTML='Dès réception, nous regardons vos photos et vous envoyons le devis estimatif par mail.';
+  $('cliThanks').scrollIntoView({block:'start'})}
+ catch(e){$('ceeSt').textContent='Impossible de préparer la demande : '+e.message}finally{b.disabled=false;b.textContent=old}};
 })();
 
 </script></body></html>
