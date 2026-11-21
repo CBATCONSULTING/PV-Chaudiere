@@ -1,5 +1,21 @@
-DECIF — Questionnaire de pré-visite et devis (chaudière, chauffe-eau gaz et électrique) — VERSION 29 (20/11/2026)
+DECIF — Questionnaire de pré-visite et devis (chaudière, chauffe-eau gaz et électrique) — VERSION 30 (21/11/2026)
 =====================================================================
+
+NOUVEAU EN VERSION 30 (21/11/2026)
+----------------------------------
+- Le numéro de version est de nouveau visible en bas de l'écran d'accueil
+  (« DECIF — Version 30 — 21/11/2026 »), côté Bureau comme côté Technicien.
+- Technicien : nouvelle fiche « Visite d'entretien » (accueil Technicien, ou lien
+  envoyé par le bureau avec le bouton « Copier le lien de la visite pour le technicien ») :
+  points de contrôle (arrêté 2009 modifié 2022), mesure de CO, anomalies A1 / A2 / DGI,
+  conseils, installation gaz, ramonage (certificat joint), passage au contrat sur place,
+  signatures, puis attestation PDF envoyée au client et à contact@decif.fr.
+  Si le client demande un devis : boutons « Le client veut un devis » en bas de la fiche,
+  le questionnaire s'ouvre déjà rempli (les anomalies sont reprises).
+- Dépannage : uniquement chaudière et chauffe-eau gaz (chauffe-bain). Radiateurs,
+  chauffe-eau électrique, plomberie, salle de bains, autres travaux = devis seulement.
+- Mise en ligne : remplacer TOUS les fichiers (index.html, entretien.html, sw.js…).
+  La ligne VERSION de sw.js est déjà changée (decif-previsite-v30-2026-11-21).
 
 1. POUR LE WEBMASTER : MISE EN LIGNE
 ------------------------------------
