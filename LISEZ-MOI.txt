@@ -1,4 +1,4 @@
-DECIF — Questionnaire de pré-visite et devis (chaudière, chauffe-eau gaz et électrique) — VERSION 28 (19/11/2026)
+DECIF — Questionnaire de pré-visite et devis (chaudière, chauffe-eau gaz et électrique) — VERSION 29 (20/11/2026)
 =====================================================================
 
 1. POUR LE WEBMASTER : MISE EN LIGNE
@@ -336,3 +336,44 @@ NOUVEAU EN VERSION 3 et 4
 
 - VERSION 18 (28/10/2026) :
   • Sur Android, si le questionnaire est ouvert dans un navigateur qui ne sait pas partager les PDF (navigateur intégré à Drive, au lecteur PDF, à Gmail…, ou autre que Chrome), le cadre des PDF l’explique et propose « Ouvrir le questionnaire dans Chrome ». À faire une fois sur chaque Android : ouvrir le lien dans Chrome, menu ⋮ → « Installer l’application », puis toujours passer par l’icône « DECIF Visite ».
+
+VERSION 29 (20/11/2026) — À FAIRE SUIVRE À JB : mettre en ligne index.html, entretien.html et sw.js
+-------------------------------------------------------------------------------------------------
+- Nouvel écran d'ACCUEIL : on choisit Bureau ou Technicien, puis le service.
+  Bureau : Chaudière, Chauffe-eau gaz, Chauffe-eau électrique, Radiateurs, Plomberie sanitaire,
+  Salle de bains, Autres travaux, Entretien / contrat (+ « Un contrat : comment faire »,
+  « Mail d'installation », « Reprendre un dossier », « Fin de chantier »).
+  Technicien : Continuer le dossier en cours, Pré-visite / devis, Le client veut un entretien,
+  Fin de chantier, Reprendre un dossier.
+- Bouton « 🏠 Accueil » en haut de chaque écran.
+- Les liens envoyés (dossier technicien, fin de chantier, entretien) ouvrent toujours directement le dossier.
+- Plomberie sanitaire / Salle de bains / Autres travaux : le bureau envoie un lien « demande + photos »
+  au client OU au technicien (sur place). Retour : PDF « 1 - NOM Prénom - Demande ... - date.pdf ».
+  Pas de fiche Extrabat avant le devis signé (ensuite DOSSIER CHANTIER).
+- « Mail d'installation » : texte à copier pour un nouvel utilisateur (ordinateur, Android, iPhone).
+- Aucun changement dans les calculs, les devis ni la fiche 3.
+
+VERSION 29 — COMPLÉMENTS DU 20/11/2026 AU SOIR (même version, pas encore en ligne)
+- Accueil Bureau par FAMILLES d'appareils (Chaudière, Chauffe-eau gaz, Chauffe-eau électrique, Radiateurs,
+  Plomberie sanitaire, Salle de bains, Autres travaux). Dans chaque famille : 1. Dépannage, 2. Entretien / contrat
+  (chaudière, chauffe-bain, chauffe-eau électrique), 3. Travaux.
+- Question « Le client a-t-il un contrat DECIF ? » au début du dépannage et de l'entretien.
+  Entretien + Oui = pas de nouveau devis (fiche CONTRATS, planifier la visite).
+- Dépannage : sous contrat = compris (pièces en plus) ; hors contrat = 160 € TTC + proposer le contrat.
+  Message pour le technicien avec le lien « fiche de dépannage » (remplie sur place, signée par le client,
+  PDF au bureau) ; lien photos pour le client. Technicien : bouton « Dépannage » dans son accueil.
+- Entretien, nouvelle grille TTC (logement > 2 ans) — visite / contrat :
+  basse température 125 / 150 (10 %) ; condensation 130 / 170 (5,5 %) ; ballon intégré BT 150 / 185, condensation 155 / 205 ;
+  ballon UPEC BT 170 / 210, condensation 175 / 230 ; chauffe-bain 115 / 140 ; chauffe-eau électrique contrat 120.
+  Logement neuf ou société : 20 %, même HT, TTC arrondi aux 5 €. Ramonage 69 € (75 € à 20 %).
+- Ballon : chaudière seule / ballon intégré / ballon séparé UPEC / « on ne sait pas » (prix chaudière seule +
+  cadre « supplément selon votre installation » sur le devis, confirmé par le technicien en arrivant).
+- Fiche interne : « Durée à bloquer dans l'agenda » (BT 1 h, condensation 1 h 15, + 15 min ballon intégré,
+  + 30 min UPEC, + 30 min ramonage, chauffe-bain 45 min, chauffe-eau électrique 30 min).
+- Conditions du contrat : 1 an à partir du règlement, pas de reconduction automatique (relance par DECIF),
+  période non réglée non couverte, année sautée = prix revu possible. Déplacement non justifié et entretien
+  impossible : 89 € TTC (code Extrabat DEPLACEMENT_89 à créer à la place de DEPLACEMENT_79).
+- Page client entretien simplifiée : coordonnées (obligatoires : nom, téléphone, e-mail, code postal, étage,
+  ascenseur dès le 1er), « Votre logement » (particulier / société, plus de 2 ans ?), photos (l'étiquette surtout),
+  puis « J'envoie, DECIF s'occupe de mon devis » ou « Je connais mon appareil : voir mon devis ».
+- Technicien : Yanis MELAOUI ajouté à la liste.
