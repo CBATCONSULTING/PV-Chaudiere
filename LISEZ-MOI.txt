@@ -1,5 +1,22 @@
-DECIF — Questionnaire de pré-visite et devis (chaudière, chauffe-eau gaz et électrique) — VERSION 30 (21/11/2026)
+DECIF — Questionnaire de pré-visite et devis (chaudière, chauffe-eau gaz et électrique) — VERSION 31 (21/11/2026)
 =====================================================================
+
+NOUVEAU EN VERSION 31 (21/11/2026)
+----------------------------------
+- Bureau, Entretien : quand l'appareil, le ballon et le logement sont remplis, le lien
+  « Copier le lien pour mail / SMS » ouvre directement le DEVIS À SIGNER chez le client
+  (pas de questions, photos facultatives) : il choisit visite ou contrat, donne ses
+  disponibilités et signe.
+- Les prix « visite ponctuelle » et « contrat » affichés suivent le ballon choisi
+  (ex. condensation avec ballon intégré : 155 / 205 €).
+- Fiche interne : « entretien impossible = 89 € TTC de déplacement (ligne TVX et fourniture) ».
+- Pages client et technicien : quand il manque une information (téléphone, code postal,
+  étage…), un bandeau rouge s'affiche en haut de l'écran, le champ à remplir est entouré
+  en rouge et le curseur s'y place (le téléphone vibre).
+- Logement neuf ou société (TVA 20 %) : prix TTC exact = HT × 1,2 au centime (plus d'arrondi
+  à 5 €). Ex. contrat basse température 136,36 € HT = 163,63 € TTC ; ramonage 62,73 € HT = 75,28 € TTC.
+- Le lien client garde aussi le ramonage choisi au bureau ; pas de « M./Mme » devant une société.
+- sw.js : decif-previsite-v31-2026-11-21.
 
 NOUVEAU EN VERSION 30 (21/11/2026)
 ----------------------------------
