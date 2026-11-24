@@ -1,5 +1,16 @@
-DECIF — Questionnaire de pré-visite et devis (chaudière, chauffe-eau gaz et électrique) — VERSION 31 (21/11/2026)
+DECIF — Questionnaire de pré-visite et devis (chaudière, chauffe-eau gaz et électrique) — VERSION 32 (24/11/2026)
 =====================================================================
+
+NOUVEAU EN VERSION 32 (24/11/2026)
+----------------------------------
+- Reprend tout ce qui a été ajouté à la V31 après sa mise en ligne :
+  famille Chaudière = 1. Dépannage, 2. Entretien / contrat (sous contrat ou hors contrat),
+  3. Devis : remplacer la chaudière (client sous contrat ou non), AUTRES TRAVAUX ;
+  bouton « Ouvrir le questionnaire (client sous contrat) » ; proposition de contrat
+  « sous réserve de conformité » ; prix exacts à 20 % ; 89 € partout.
+- Textes des tuiles de l'accueil mis à jour (Chaudière : dépannage, entretien / contrat,
+  remplacement, travaux).
+- sw.js : decif-previsite-v32-2026-11-24. Remplacer TOUS les fichiers.
 
 NOUVEAU EN VERSION 31 (21/11/2026)
 ----------------------------------
@@ -16,6 +27,14 @@ NOUVEAU EN VERSION 31 (21/11/2026)
 - Logement neuf ou société (TVA 20 %) : prix TTC exact = HT × 1,2 au centime (plus d'arrondi
   à 5 €). Ex. contrat basse température 136,36 € HT = 163,63 € TTC ; ramonage 62,73 € HT = 75,28 € TTC.
 - Le lien client garde aussi le ramonage choisi au bureau ; pas de « M./Mme » devant une société.
+- Accueil Bureau > famille > Entretien > « Le client a un contrat ? » Oui : nouveau bouton
+  « Ouvrir le questionnaire (client sous contrat) » : remplir depuis la fiche Extrabat, puis
+  « Copier le lien de la visite pour le technicien » (pas de devis à envoyer).
+  + bouton « Il veut aussi un devis : remplacer la chaudière » (fiche pré-visite bureau).
+  Familles Chaudière, Chauffe-eau gaz, Chauffe-eau électrique : 1. Dépannage, 2. Entretien / contrat
+  (sous contrat ou hors contrat), 3. Devis de remplacement (client sous contrat ou non), puis
+  AUTRES TRAVAUX (désembouage, robinet gaz, thermostat, fuite… : description + photos).
+- Proposition de contrat : titre « Proposition de contrat N° » + cadre « sous réserve de conformité ».
 - sw.js : decif-previsite-v31-2026-11-21.
 
 NOUVEAU EN VERSION 30 (21/11/2026)
