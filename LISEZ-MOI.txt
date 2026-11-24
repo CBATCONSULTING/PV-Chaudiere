@@ -1,5 +1,15 @@
-DECIF — Questionnaire de pré-visite et devis (chaudière, chauffe-eau gaz et électrique) — VERSION 32 (24/11/2026)
+DECIF — Questionnaire de pré-visite et devis (chaudière, chauffe-eau gaz et électrique) — VERSION 33 (24/11/2026)
 =====================================================================
+
+NOUVEAU EN VERSION 33 (24/11/2026)
+----------------------------------
+- Bureau > Chaudière (et Chauffe-eau gaz) : nouveau bouton « 📷 Demander photos + marque au
+  client ». Remplir nom + téléphone ou mail, puis « Lien client pour SMS / mail ». Le client
+  choisit la marque, dit si elle fait l'eau chaude, le type de tuyau de fumée, l'âge, pourquoi
+  la changer, et prend ses photos guidées (appareil, étiquette, tuyau de fumée, tuyaux dessous,
+  pièce, thermostat, compteur gaz). Le bureau reçoit « 1 - NOM - Demande remplacement chaudiere »
+  et prépare le devis estimatif sans se déplacer pour rien.
+- sw.js : decif-previsite-v33-2026-11-24. Remplacer TOUS les fichiers.
 
 NOUVEAU EN VERSION 32 (24/11/2026)
 ----------------------------------

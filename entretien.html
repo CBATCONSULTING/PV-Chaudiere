@@ -773,6 +773,21 @@ const CFG={
   q:[['trApp','Votre appareil',['Chaudière','Chauffe-eau gaz (chauffe-bain)']],
      ['trPb','Que se passe-t-il ?',['Plus de chauffage','Plus d’eau chaude','Fuite','Code erreur / voyant','Bruit / odeur','Autre'],1]],
   ph:['L’appareil en entier','L’étiquette de l’appareil (marque, modèle) : souvent dessous ou derrière le petit volet','L’écran ou le voyant (code erreur), ou l’endroit de la fuite','Autre photo utile']},
+ chdph:{ic:'🔥',t:'Remplacement de chaudière',f:'remplacement chaudiere',
+  q:[['trMq','La marque de votre chaudière',['Saunier Duval','ELM Leblanc','Frisquet','Chaffoteaux','De Dietrich','Vaillant','Viessmann','Autre','Je ne sais pas']],
+     ['trEc','Elle fait',['Chauffage et eau chaude','Chauffage seulement (ballon à part)','Je ne sais pas']],
+     ['trEv','Le tuyau de fumée au-dessus',['Monte dans une cheminée / un conduit','Sort par le mur ou le toit (ventouse)','Je ne sais pas']],
+     ['trAg','Son âge environ',['Moins de 10 ans','10 à 20 ans','Plus de 20 ans','Je ne sais pas']],
+     ['trW','Pourquoi la changer ?',['En panne','Trop vieille / consomme trop','Fuites, bruit','Autre'],1],
+     ['trL','Logement',['Appartement','Maison']]],
+  ph:['La chaudière en entier, de face','L’étiquette (marque, modèle) : souvent dessous ou derrière le petit volet','Le tuyau de fumée au-dessus de la chaudière, jusqu’au plafond ou au mur','Les tuyaux sous la chaudière','La pièce autour de la chaudière (pour voir la place)','Le thermostat d’ambiance s’il y en a un','Le compteur gaz (facultatif)']},
+ ceph:{ic:'🚿',t:'Remplacement de chauffe-bain',f:'remplacement chauffe-bain',
+  q:[['trMq','La marque de votre chauffe-bain',['Saunier Duval','ELM Leblanc','Chaffoteaux','Vaillant','Autre','Je ne sais pas']],
+     ['trEv','Le tuyau de fumée au-dessus',['Monte dans une cheminée / un conduit','Pas de tuyau / je ne sais pas']],
+     ['trAg','Son âge environ',['Moins de 10 ans','10 à 20 ans','Plus de 20 ans','Je ne sais pas']],
+     ['trW','Pourquoi le changer ?',['En panne','Trop vieux','Fuites, eau pas assez chaude','Autre'],1],
+     ['trL','Logement',['Appartement','Maison']]],
+  ph:['Le chauffe-bain en entier, de face','L’étiquette (marque, modèle) : souvent dessous ou sur le côté','Le tuyau de fumée au-dessus','Les tuyaux dessous','La pièce autour (pour voir la place)','Le compteur gaz (facultatif)']},
  autre:{ic:'🧰',t:'Autres travaux',f:'travaux',free:1,
   q:[['trL','Logement',['Appartement','Maison','Local professionnel']]],
   ph:['Vue d’ensemble','Le détail des travaux','Autre photo utile']}
@@ -821,7 +836,7 @@ async function pdf(){const {PDFDocument,StandardFonts,rgb}=PDFLib;const doc=awai
  kv('Accès',[v('bEtage')?'Étage '+v('bEtage'):'',v('bAsc')&&v('bAsc')!=='Choisir'?'ascenseur : '+v('bAsc'):'',v('bAcces')].filter(Boolean).join(' - '));
  sec('La demande');if(P.k==='dep'){kv('Contrat DECIF',P.ctr==='oui'?'Oui — dépannage compris (pièces en plus)':P.ctr==='non'?'Non — dépannage 160 € TTC':'à vérifier');kv('Urgence',P.ur||'')}C.q.forEach(q=>kv(q[1],ans(q)||'non renseigné'));kv('Description',v('trDesc'));if(P.tech&&P.k==='dep'){sec('Intervention du technicien');kv('Diagnostic / travaux',v('trDiag')||'non renseigné');kv('Contrat d’entretien',(document.querySelector('input[name=trCtr]:checked')||{}).value||'non renseigné');const sg=window.__trSig&&window.__trSig();if(sg){try{const im=await doc.embedPng(sg);const w=180,h=w*im.height/im.width;if(y-h-20<M)y=M+h+20;page.drawText(T('Signature du client'),{x:M,y:y-10,size:10,font:B,color:ink});page.drawImage(im,{x:M+170,y:y-h,width:w,height:h});y-=h+8}catch(e){}}}
  kv('Photos',ENT_PHOTOS.length?ENT_PHOTOS.length+' photo(s) dans les pages suivantes':'aucune photo envoyée');
- y-=8;wrap((P.k==='dep'?'Pour le bureau : ranger cette fiche dans le porte-documents du client (dossier CONTRATS s’il est sous contrat, sinon DOSSIER CHANTIER) et faire la facture du dépannage.':'Pour le bureau : faire le devis (ou fixer une visite si les photos ne suffisent pas). Pas de fiche Extrabat tant que le devis signé n’est pas revenu ; ensuite, ranger dans le dossier DOSSIER CHANTIER.'),F,9,W-2*M).forEach(l=>{page.drawText(l,{x:M,y:y-10,size:9,font:F,color:grey});y-=12});
+ y-=8;wrap((P.k==='dep'?'Pour le bureau : ranger cette fiche dans le porte-documents du client (dossier CONTRATS s’il est sous contrat, sinon DOSSIER CHANTIER) et faire la facture du dépannage.':/ph$/.test(P.k)?'Pour le bureau : créer la fiche Extrabat (DOSSIER CHAUDIERE), puis faire le devis estimatif (case « 📷 Devis estimatif » du questionnaire) ou fixer une pré-visite.':'Pour le bureau : faire le devis (ou fixer une visite si les photos ne suffisent pas). Pas de fiche Extrabat tant que le devis signé n’est pas revenu ; ensuite, ranger dans le dossier DOSSIER CHANTIER.'),F,9,W-2*M).forEach(l=>{page.drawText(l,{x:M,y:y-10,size:9,font:F,color:grey});y-=12});
  foot(page);
  for(const p of ENT_PHOTOS){try{const im=await entImg(doc,p.d);const pg=doc.addPage([W,H]);pg.drawText(T(P.tech?'Photo':'Photo du client'),{x:M,y:H-M-10,size:11,font:B,color:blue});const mw=W-2*M,mh=H-2*M-60;const sc=Math.min(mw/im.width,mh/im.height);pg.drawImage(im,{x:M+(mw-im.width*sc)/2,y:H-M-30-im.height*sc,width:im.width*sc,height:im.height*sc});foot(pg)}catch(e){}}
  const d=new Date(),p2=n=>String(n).padStart(2,'0');const name='1 - '+clean([v('bNom').toUpperCase(),v('bPrenom')].filter(Boolean).join(' ')||'CLIENT')+' - Demande '+C.f+' - '+p2(d.getDate())+'-'+p2(d.getMonth()+1)+'-'+d.getFullYear()+'.pdf';
