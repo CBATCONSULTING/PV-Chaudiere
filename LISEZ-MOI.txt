@@ -1,5 +1,43 @@
-DECIF — Questionnaire de pré-visite et devis (chaudière, chauffe-eau gaz et électrique) — VERSION 33 (24/11/2026)
+DECIF — Questionnaire de pré-visite et devis (chaudière, chauffe-eau gaz et électrique) — VERSION 34 (26/11/2026)
 =====================================================================
+
+COMPLÉMENTS VERSION 34 (26/11/2026)
+----------------------------------
+- Bureau : cadre « 👤 Sur place : occupant ou contact » (nom + téléphone) quand ce n'est pas le
+  client. Repris avec l'étage, l'ascenseur et les codes d'accès sur : la fiche Visite d'entretien
+  du technicien (cadre « 🔑 Accès au logement »), la pré-visite, les demandes de travaux /
+  dépannage, le PDF pour le technicien et le devis d'entretien.
+- Facturation différente (décocher « Adresse de facturation identique ») : Qui paie ?
+  (propriétaire bailleur / agence, syndic, gestionnaire / autre), nom du payeur (ex. Syndic
+  CITYA KST) et son adresse = cadre de droite sur le devis (nom / rue / CP VILLE).
+  Cadre de gauche « Adresse intervention » : nom / rue / CP VILLE (sans étage).
+  Le type de payeur (agence, propriétaire…) est écrit dans l'encart « Références du dossier ».
+- Aucun numéro de téléphone du client ni du gestionnaire sur les devis et propositions de
+  contrat (ils restent sur le PDF pour le technicien).
+  Encart « Références du dossier » sous les adresses : propriétaire (si connu), réf. dossier
+  (KST…), affaire gérée par (nom choisi dans la liste ou tapé : la liste retient les noms
+  déjà utilisés sur ce poste) + tél / e-mail, logement occupé par. Repris dans la fiche du
+  technicien (payeur).
+- « Téléphone occupant » s'appelle maintenant « Téléphone du client ».
+- sw.js : decif-previsite-v34-2026-11-26. Remplacer TOUS les fichiers.
+
+NOUVEAU EN VERSION 34 (24/11/2026)
+----------------------------------
+- Dépannage SOUS CONTRAT : rien dans l'appli. Tout se fait dans Extrabat (vérifier le contrat,
+  fiche d'intervention + bon de commande pour le technicien, agenda).
+- Dépannage HORS CONTRAT : lien client (SMS / mail) : 3 photos demandées (l'appareil, le code
+  erreur affiché, la pression d'eau) + son devis de dépannage en ligne : 145,45 € HT + TVA 10 %
+  = 160,00 € TTC ; si une réparation demande un devis, 80 € TTC en sont déduits. Le client peut
+  accepter le devis (case à cocher) et donner ses disponibilités, ou juste envoyer ses photos.
+  Le bureau reçoit « DEMANDE DE DÉPANNAGE » en PDF (devis accepté ou non).
+- Bureau : chaque famille rappelle en haut « D'abord : chercher le client dans Extrabat ».
+  Chauffe-eau électrique : pas de dépannage (contrat, devis de remplacement, autres travaux).
+- Bureau : bouton « 📄 PDF pour le technicien (à déposer dans Extrabat) » dans l'Entretien,
+  le Dépannage hors contrat, et les demandes de travaux / photos. Une page avec les infos du
+  client et un gros bouton qui ouvre la fiche du technicien déjà remplie. À déposer dans :
+  entretien = dossier CONTRATS ; chaudière / chauffe-bain = DOSSIER CHAUDIERE ; le reste = DOSSIER CHANTIER.
+- (V33, si elle n'a pas été mise en ligne : tout est repris ici.)
+- sw.js : decif-previsite-v34-2026-11-24. Remplacer TOUS les fichiers.
 
 NOUVEAU EN VERSION 33 (24/11/2026)
 ----------------------------------
