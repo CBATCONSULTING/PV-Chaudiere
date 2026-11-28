@@ -1,5 +1,26 @@
-DECIF — Questionnaire de pré-visite et devis (chaudière, chauffe-eau gaz et électrique) — VERSION 34 (26/11/2026)
+DECIF — Questionnaire de pré-visite et devis (chaudière, chauffe-eau gaz et électrique) — VERSION 35 (28/11/2026)
 =====================================================================
+
+NOUVEAU EN VERSION 35 (28/11/2026)
+----------------------------------
+- Nouvelle grille d'entretien (TTC, particulier, logement de plus de 2 ans) :
+                                   visite    contrat
+  Basse température seule           125 €     150 €
+  Basse température + ballon intégré 160 €    185 €
+  Condensation seule                145 €     170 €
+  Condensation + ballon intégré     160 €     185 €
+  UPEC (BT ou condensation)         195 €     240 €
+  Chauffe-bain                      115 €     140 €
+  Chauffe-eau électrique              -       120 €
+  Ramonage 69 €. Logement neuf ou local professionnel : TVA 20 % (HT x 1,2).
+- TVA : le taux dépend du local, pas de qui paie. Le choix « Société » s'appelle maintenant
+  « Local professionnel (bureaux, commerce) ». Syndic, agence ou SCI qui paie pour un
+  logement de plus de 2 ans : choisir « logement de plus de 2 ans » (5,5 % ou 10 %).
+- Ballon intégré compris dans le prix (contrôle du vase sanitaire, soupape / groupe de
+  sécurité, raccords, température, anode en visuel) ; pannes d'eau chaude couvertes par le
+  contrat (pièces en plus). Ballon inconnu : prix de base + cadre « si ballon intégré :
+  … ; UPEC : … ; confirmé par le technicien ».
+- sw.js : decif-previsite-v35-2026-11-28. Remplacer TOUS les fichiers.
 
 COMPLÉMENTS VERSION 34 (26/11/2026)
 ----------------------------------
@@ -19,7 +40,7 @@ COMPLÉMENTS VERSION 34 (26/11/2026)
   déjà utilisés sur ce poste) + tél / e-mail, logement occupé par. Repris dans la fiche du
   technicien (payeur).
 - « Téléphone occupant » s'appelle maintenant « Téléphone du client ».
-- sw.js : decif-previsite-v34-2026-11-26. Remplacer TOUS les fichiers.
+- sw.js : decif-previsite-v34-2026-11-26 (ancienne). Remplacer TOUS les fichiers.
 
 NOUVEAU EN VERSION 34 (24/11/2026)
 ----------------------------------
